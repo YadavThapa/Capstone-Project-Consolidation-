@@ -1,0 +1,57 @@
+[MASTER]
+# Ignore Django migration files and other auto-generated files
+ignore=migrations,0001_initial.py,0002_*.py,0003_*.py,0004_*.py,0005_*.py
+
+# Files or directories to be skipped. They should be base names, not paths.
+ignore-patterns=*migrations*,*__pycache__*,*/migrations/*,**/migrations/**,news_app/migrations/*
+
+# Ignore paths
+ignore-paths=^.*migrations.*$,^.*__pycache__.*$
+
+[MESSAGES CONTROL]
+# Disable warnings for migration files and Django models
+disable=
+    C0114,  # missing-module-docstring
+    C0115,  # missing-class-docstring
+    C0103,  # invalid-name
+    C0301,  # line-too-long
+    E1101,  # no-member (Django dynamic attributes)
+    R0903,  # too-few-public-methods
+    W0613,  # unused-argument
+    C0116,  # missing-function-docstring
+    E0213,  # no-self-argument
+    R0801,  # duplicate-code
+    W0212,  # protected-access
+    R0913,  # too-many-arguments
+    R0914,  # too-many-locals
+    C0200,  # consider-using-enumerate
+    W0622,  # redefined-builtin
+    C0209,  # consider-using-f-string
+    R0902,  # too-many-instance-attributes
+
+[FORMAT]
+# Maximum number of characters on a single line for migration files
+max-line-length=200
+
+[TYPECHECK]
+# List of module names for which member attributes should not be checked
+ignored-modules=django,django.db,django.contrib
+
+# List of class names for which member attributes should not be checked
+ignored-classes=WSGIRequest,DatabaseWrapper
+
+[DESIGN]
+# Maximum number of arguments for function / method
+max-args=10
+
+# Maximum number of locals for function / method body
+max-locals=20
+
+# Maximum number of return / yield for function / method body
+max-returns=10
+
+# Maximum number of branch for function / method body
+max-branches=15
+
+# Maximum number of statements in function / method body
+max-statements=60

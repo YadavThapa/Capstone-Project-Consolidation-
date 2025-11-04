@@ -1,0 +1,368 @@
+{% extends 'news_app/base.html' %}
+{% load static %}
+
+{% block title %}Article Approval Management{% endblock %}
+
+{% block extra_css %}
+<style>
+    .approval-management {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .approval-header {
+        background: linear-gradient(45deg, #2c3e50, #34495e);
+        color: white;
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 25px;
+    }
+    .approval-header h1 {
+        margin: 0;
+        font-size: 2.2rem;
+    }
+    .filters-section {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        margin-bottom: 25px;
+    }
+    .filters-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        align-items: end;
+    }
+    .filter-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: 500;
+        color: #2c3e50;
+    }
+    .filter-group input,
+    .filter-group select {
+        width: 100%;
+        padding: 8px 12px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+    .btn-filter {
+        background: #007bff;
+        color: white;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        height: fit-content;
+    }
+    .btn-filter:hover {
+        background: #0056b3;
+    }
+    .articles-grid {
+        display: grid;
+        gap: 20px;
+    }
+    .article-card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        overflow: hidden;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .article-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+    .article-header {
+        padding: 20px;
+        border-bottom: 1px solid #e9ecef;
+    }
+    .article-title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: #2c3e50;
+        margin-bottom: 10px;
+        line-height: 1.4;
+    }
+    .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        color: #6c757d;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+    .article-meta span {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .article-status {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+    .status-pending {
+        background: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeaa7;
+    }
+    .status-approved {
+        background: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+    .status-rejected {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f1aeb5;
+    }
+    .article-content {
+        padding: 0 20px;
+    }
+    .article-excerpt {
+        color: #6c757d;
+        line-height: 1.6;
+        margin-bottom: 15px;
+    }
+    .article-actions {
+        padding: 20px;
+        background: #f8f9fa;
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+    .btn-action {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.9rem;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+    }
+    .btn-view {
+        background: #6c757d;
+        color: white;
+    }
+    .btn-view:hover {
+        background: #5a6268;
+        color: white;
+        text-decoration: none;
+    }
+    .btn-approve {
+        background: #28a745;
+        color: white;
+    }
+    .btn-approve:hover {
+        background: #218838;
+        color: white;
+        text-decoration: none;
+    }
+    .btn-reject {
+        background: #dc3545;
+        color: white;
+    }
+    .btn-reject:hover {
+        background: #c82333;
+        color: white;
+        text-decoration: none;
+    }
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .empty-state img {
+        width: 120px;
+        opacity: 0.3;
+        margin-bottom: 20px;
+    }
+    .empty-state h3 {
+        color: #6c757d;
+        margin-bottom: 10px;
+    }
+    .empty-state p {
+        color: #adb5bd;
+    }
+    .pagination-wrapper {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .category-tag {
+        background: #e9ecef;
+        color: #495057;
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        margin-right: 5px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="approval-management">
+    <div class="approval-header">
+        <h1>Article Approval Management</h1>
+        <p>Review and manage article submissions</p>
+    </div>
+
+    <!-- Filters Section -->
+    <div class="filters-section">
+        <form method="get" class="filters-grid">
+            <div class="filter-group">
+                <label for="search">Search Articles</label>
+                <input type="text" 
+                       id="search" 
+                       name="search" 
+                       value="{{ request.GET.search }}" 
+                       placeholder="Title, author, or content...">
+            </div>
+            
+            <div class="filter-group">
+                <label for="status">Status</label>
+                <select id="status" name="status">
+                    <option value="">All Statuses</option>
+                    <option value="pending" {% if request.GET.status == 'pending' %}selected{% endif %}>Pending</option>
+                    <option value="approved" {% if request.GET.status == 'approved' %}selected{% endif %}>Approved</option>
+                    <option value="rejected" {% if request.GET.status == 'rejected' %}selected{% endif %}>Rejected</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="author">Author</label>
+                <select id="author" name="author">
+                    <option value="">All Authors</option>
+                    {% for author in authors %}
+                    <option value="{{ author.id }}" {% if request.GET.author == author.id|stringformat:"s" %}selected{% endif %}>
+                        {{ author.get_full_name|default:author.username }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="publisher">Publisher</label>
+                <select id="publisher" name="publisher">
+                    <option value="">All Publishers</option>
+                    {% for publisher in publishers %}
+                    <option value="{{ publisher.id }}" {% if request.GET.publisher == publisher.id|stringformat:"s" %}selected{% endif %}>
+                        {{ publisher.name }}
+                    </option>
+                    {% endfor %}
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <button type="submit" class="btn-filter">Apply Filters</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Articles List -->
+    <div class="articles-grid">
+        {% for article in articles %}
+        <div class="article-card">
+            <div class="article-header">
+                <h3 class="article-title">{{ article.title }}</h3>
+                <div class="article-meta">
+                    <span>👤 {{ article.author.get_full_name|default:article.author.username }}</span>
+                    <span>🏢 {{ article.publisher.name }}</span>
+                    <span>📅 {{ article.created_at|date:"M j, Y" }}</span>
+                    <span>🕒 {{ article.created_at|time:"g:i A" }}</span>
+                </div>
+                <div>
+                    <span class="article-status status-{% if article.is_approved %}approved{% else %}pending{% endif %}">
+                        {% if article.is_approved %}Approved{% else %}Pending{% endif %}
+                    </span>
+                    {% if article.tags %}
+                    <span class="category-tag">{{ article.tags }}</span>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="article-content">
+                <p class="article-excerpt">
+                    {{ article.content|truncatewords:30 }}
+                </p>
+            </div>
+            
+            <div class="article-actions">
+                <a href="{% url 'admin_article_detail' article.id %}" class="btn-action btn-view">
+                    👁️ View Details
+                </a>
+                
+                {% if not article.is_approved %}
+                <a href="{% url 'admin_approve_article' article.id %}" 
+                   class="btn-action btn-approve"
+                   onclick="return confirm('Are you sure you want to approve this article?')">
+                    ✅ Approve
+                </a>
+                
+                <a href="{% url 'admin_reject_article' article.id %}" 
+                   class="btn-action btn-reject"
+                   onclick="return confirm('Are you sure you want to reject this article?')">
+                    ❌ Reject
+                </a>
+                {% else %}
+                <span class="btn-action" style="background: #e9ecef; color: #6c757d;">
+                    ✅ Already Approved
+                </span>
+                {% endif %}
+            </div>
+        </div>
+        {% empty %}
+        <div class="empty-state">
+            <h3>No Articles Found</h3>
+            <p>No articles match your current filter criteria.</p>
+            <a href="{% url 'admin_article_approval_list' %}" class="btn-action btn-view">Clear Filters</a>
+        </div>
+        {% endfor %}
+    </div>
+
+    <!-- Pagination -->
+    {% if is_paginated %}
+    <div class="pagination-wrapper">
+        <nav aria-label="Article pagination">
+            <ul class="pagination">
+                {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.previous_page_number }}">Previous</a>
+                </li>
+                {% endif %}
+                
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <li class="page-item active">
+                    <span class="page-link">{{ num }}</span>
+                </li>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <li class="page-item">
+                    <a class="page-link" href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ num }}">{{ num }}</a>
+                </li>
+                {% endif %}
+                {% endfor %}
+                
+                {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?{% for key, value in request.GET.items %}{% if key != 'page' %}{{ key }}={{ value }}&{% endif %}{% endfor %}page={{ page_obj.next_page_number }}">Next</a>
+                </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

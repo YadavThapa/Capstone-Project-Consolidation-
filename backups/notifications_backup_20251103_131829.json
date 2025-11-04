@@ -1,0 +1,677 @@
+[
+  {
+    "model": "news_app.notification",
+    "pk": 45,
+    "fields": {
+      "recipient": 40,
+      "article": 145,
+      "title": "New Article from Agriculture & Farming News: Breaking: Major Technology Breakthrough in AI Research",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Breaking: Major Technology Breakthrough in AI Research\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nScientists at leading research institutions have announced a significant breakthrough in artificial intelligence that could revolutionize multiple industries. The new AI system demonstrates unprecedented capabilities in understanding and processing complex information.\n\nThe research team, led by Dr. Sarah Chen, has developed algorithms that can learn and adapt at rates previously thought impossibl...\n\nRead the full article: http://127.0.0.1:8000/articles/breaking-major-technology-breakthrough-in-ai-research/\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/45/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "c0fdf4578da14fc68c6e2f05e9ee1d4d",
+      "created_at": "2025-11-03T18:01:45.061165+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 44,
+    "fields": {
+      "recipient": 4,
+      "article": 145,
+      "title": "New Article from Agriculture & Farming News: Breaking: Major Technology Breakthrough in AI Research",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Breaking: Major Technology Breakthrough in AI Research\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nScientists at leading research institutions have announced a significant breakthrough in artificial intelligence that could revolutionize multiple industries. The new AI system demonstrates unprecedented capabilities in understanding and processing complex information.\n\nThe research team, led by Dr. Sarah Chen, has developed algorithms that can learn and adapt at rates previously thought impossibl...\n\nRead the full article: http://127.0.0.1:8000/articles/breaking-major-technology-breakthrough-in-ai-research/\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/44/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "9d7cffd6aade40e0a59993147370b010",
+      "created_at": "2025-11-03T18:01:43.260311+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 43,
+    "fields": {
+      "recipient": 1,
+      "article": 145,
+      "title": "New Article from Agriculture & Farming News: Breaking: Major Technology Breakthrough in AI Research",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Breaking: Major Technology Breakthrough in AI Research\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nScientists at leading research institutions have announced a significant breakthrough in artificial intelligence that could revolutionize multiple industries. The new AI system demonstrates unprecedented capabilities in understanding and processing complex information.\n\nThe research team, led by Dr. Sarah Chen, has developed algorithms that can learn and adapt at rates previously thought impossibl...\n\nRead the full article: http://127.0.0.1:8000/articles/breaking-major-technology-breakthrough-in-ai-research/\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/43/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "65fa180ed3214ed6863eeb76e9dc972f",
+      "created_at": "2025-11-03T18:01:41.842854+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 42,
+    "fields": {
+      "recipient": 21,
+      "article": 145,
+      "title": "New Article from Agriculture & Farming News: Breaking: Major Technology Breakthrough in AI Research",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Breaking: Major Technology Breakthrough in AI Research\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nScientists at leading research institutions have announced a significant breakthrough in artificial intelligence that could revolutionize multiple industries. The new AI system demonstrates unprecedented capabilities in understanding and processing complex information.\n\nThe research team, led by Dr. Sarah Chen, has developed algorithms that can learn and adapt at rates previously thought impossibl...\n\nRead the full article: http://127.0.0.1:8000/articles/breaking-major-technology-breakthrough-in-ai-research/\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/42/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "05cdeb37ddc3489ea781b43f986c5512",
+      "created_at": "2025-11-03T18:01:40.111379+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 41,
+    "fields": {
+      "recipient": 4,
+      "article": 150,
+      "title": "New Article from Agriculture & Farming News: Test Signal Article - Email Test",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Test Signal Article - Email Test\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nTesting email notifications via Django signals.\n\nRead the full article: http://127.0.0.1:8000/articles//\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/41/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "c6dbb6999f6244e8bf5c7e1306d6fa0f",
+      "created_at": "2025-11-03T17:53:02.787783+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 40,
+    "fields": {
+      "recipient": 1,
+      "article": 150,
+      "title": "New Article from Agriculture & Farming News: Test Signal Article - Email Test",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Test Signal Article - Email Test\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nTesting email notifications via Django signals.\n\nRead the full article: http://127.0.0.1:8000/articles//\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/40/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "b62e263483f342f09063af943bc4d611",
+      "created_at": "2025-11-03T17:53:01.361436+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 39,
+    "fields": {
+      "recipient": 21,
+      "article": 150,
+      "title": "New Article from Agriculture & Farming News: Test Signal Article - Email Test",
+      "message": "📰 New Article from Agriculture & Farming News!\n\nTitle: Test Signal Article - Email Test\nAuthor: Jane Journalist\nPublisher: Agriculture & Farming News\n\nTesting email notifications via Django signals.\n\nRead the full article: http://127.0.0.1:8000/articles//\n\n✅ You subscribed to Agriculture & Farming News\n\n---\nMark as read: http://127.0.0.1:8000/mark-read/39/\nThis email includes read tracking for your convenience.",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "1c1c490e19644636af34b23f1bd33e95",
+      "created_at": "2025-11-03T17:52:59.063215+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 38,
+    "fields": {
+      "recipient": 22,
+      "article": 11,
+      "title": "New article: Renewable Energy Project Powers Entire City",
+      "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "5944a3e8f46a46b6ba41b600d32d02af",
+      "created_at": "2025-11-03T12:04:54.553401+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 37,
+    "fields": {
+      "recipient": 21,
+      "article": 11,
+      "title": "New article: Renewable Energy Project Powers Entire City",
+      "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "bed8d56c5dde41f0b175038085bc75e8",
+      "created_at": "2025-11-03T12:04:54.282577+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 36,
+    "fields": {
+      "recipient": 19,
+      "article": 11,
+      "title": "New article: Renewable Energy Project Powers Entire City",
+      "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "bcdf8358eda24a579af1a2a0b834cc53",
+      "created_at": "2025-11-03T12:04:54.051685+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 35,
+    "fields": {
+      "recipient": 16,
+      "article": 11,
+      "title": "New article: Renewable Energy Project Powers Entire City",
+      "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "14b36bc9e9c845248508a8bc5344c755",
+      "created_at": "2025-11-03T12:04:53.816017+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 34,
+    "fields": {
+      "recipient": 4,
+      "article": 11,
+      "title": "New article: Renewable Energy Project Powers Entire City",
+      "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "4a2cbb12995843d989162e245f2f427d",
+      "created_at": "2025-11-03T12:04:53.586203+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 33,
+    "fields": {
+      "recipient": 22,
+      "article": 10,
+      "title": "New article: International Trade Agreement Signed",
+      "message": "A new article has been published: International Trade Agreement Signed",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "f5bd12f1d98940f4a8619c3fe2234032",
+      "created_at": "2025-11-03T12:04:53.360746+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 32,
+    "fields": {
+      "recipient": 17,
+      "article": 10,
+      "title": "New article: International Trade Agreement Signed",
+      "message": "A new article has been published: International Trade Agreement Signed",
+      "notification_type": "journalist",
+      "is_read": false,
+      "read_token": "11cda7280b04487fbb6c678bb2b590d6",
+      "created_at": "2025-11-03T12:04:53.014307+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 31,
+    "fields": {
+      "recipient": 19,
+      "article": 10,
+      "title": "New article: International Trade Agreement Signed",
+      "message": "A new article has been published: International Trade Agreement Signed",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "5fbfe2c5f981480390fb2967408d0ac1",
+      "created_at": "2025-11-03T12:04:52.770757+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 30,
+    "fields": {
+      "recipient": 25,
+      "article": 10,
+      "title": "New article: International Trade Agreement Signed",
+      "message": "A new article has been published: International Trade Agreement Signed",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "56d95703418244ccbeb780b527d4240a",
+      "created_at": "2025-11-03T12:04:52.278041+00:00",
+      "email_opened_at": "2025-11-03T12:04:52.517420+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 29,
+    "fields": {
+      "recipient": 22,
+      "article": 9,
+      "title": "New article: Sports Championship Finals Draw Record Audience",
+      "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "13712da8beec42179ddeb3ca5b48ae41",
+      "created_at": "2025-11-03T12:04:51.839424+00:00",
+      "email_opened_at": "2025-11-03T12:04:52.040871+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 28,
+    "fields": {
+      "recipient": 19,
+      "article": 9,
+      "title": "New article: Sports Championship Finals Draw Record Audience",
+      "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "cfe425f30eae47df8c3984e192384965",
+      "created_at": "2025-11-03T12:04:51.622678+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 27,
+    "fields": {
+      "recipient": 18,
+      "article": 9,
+      "title": "New article: Sports Championship Finals Draw Record Audience",
+      "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "68e6467a64c143e3a2071a5660dadaf7",
+      "created_at": "2025-11-03T12:04:51.236942+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 26,
+    "fields": {
+      "recipient": 17,
+      "article": 9,
+      "title": "New article: Sports Championship Finals Draw Record Audience",
+      "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+      "notification_type": "journalist",
+      "is_read": false,
+      "read_token": "24578c4780ab4310a3dfe14c35d8d987",
+      "created_at": "2025-11-03T12:04:50.974243+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 25,
+    "fields": {
+      "recipient": 22,
+      "article": 8,
+      "title": "New article: Education Reform Bill Passes Legislature",
+      "message": "A new article has been published: Education Reform Bill Passes Legislature",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "8f855315979348238e0e2b326de302af",
+      "created_at": "2025-11-03T12:04:50.477232+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 24,
+    "fields": {
+      "recipient": 21,
+      "article": 8,
+      "title": "New article: Education Reform Bill Passes Legislature",
+      "message": "A new article has been published: Education Reform Bill Passes Legislature",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "92e502c3b1bc49ce83f0f401f3de5e9b",
+      "created_at": "2025-11-03T12:04:49.990163+00:00",
+      "email_opened_at": "2025-11-03T12:04:50.215706+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 23,
+    "fields": {
+      "recipient": 19,
+      "article": 8,
+      "title": "New article: Education Reform Bill Passes Legislature",
+      "message": "A new article has been published: Education Reform Bill Passes Legislature",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "9718a55e3aad4188adfb7609bdfce89c",
+      "created_at": "2025-11-03T12:04:49.476814+00:00",
+      "email_opened_at": "2025-11-03T12:04:49.760124+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 22,
+    "fields": {
+      "recipient": 16,
+      "article": 8,
+      "title": "New article: Education Reform Bill Passes Legislature",
+      "message": "A new article has been published: Education Reform Bill Passes Legislature",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "d38a7428cc544ba69497a92735ab28db",
+      "created_at": "2025-11-03T12:04:49.238680+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 21,
+    "fields": {
+      "recipient": 4,
+      "article": 8,
+      "title": "New article: Education Reform Bill Passes Legislature",
+      "message": "A new article has been published: Education Reform Bill Passes Legislature",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "5c3889a45d70475c9c24f425a6399de3",
+      "created_at": "2025-11-03T12:04:48.938076+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 20,
+    "fields": {
+      "recipient": 23,
+      "article": 7,
+      "title": "New article: Cultural Festival Celebrates Diverse Heritage",
+      "message": "A new article has been published: Cultural Festival Celebrates Diverse Heritage",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "99e16e7b0cf045adb8cbf36b193e5365",
+      "created_at": "2025-11-03T12:04:48.335251+00:00",
+      "email_opened_at": "2025-11-03T12:04:48.635682+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 19,
+    "fields": {
+      "recipient": 26,
+      "article": 7,
+      "title": "New article: Cultural Festival Celebrates Diverse Heritage",
+      "message": "A new article has been published: Cultural Festival Celebrates Diverse Heritage",
+      "notification_type": "journalist",
+      "is_read": false,
+      "read_token": "db65d9bbd47542c9943e4a7ca7bab84b",
+      "created_at": "2025-11-03T12:04:48.055305+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 18,
+    "fields": {
+      "recipient": 24,
+      "article": 6,
+      "title": "New article: Economic Growth Reaches Five-Year High",
+      "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "9649a954e9e243819bf886f46bf6232b",
+      "created_at": "2025-11-03T12:04:47.587064+00:00",
+      "email_opened_at": "2025-11-03T12:04:47.840543+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 17,
+    "fields": {
+      "recipient": 21,
+      "article": 6,
+      "title": "New article: Economic Growth Reaches Five-Year High",
+      "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "6916342bbe0d4097a88f4528449ffe1a",
+      "created_at": "2025-11-03T12:04:47.311795+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 16,
+    "fields": {
+      "recipient": 19,
+      "article": 6,
+      "title": "New article: Economic Growth Reaches Five-Year High",
+      "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "3e6c4e8d747d4bf79f66ea0d84317fa8",
+      "created_at": "2025-11-03T12:04:47.023463+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 15,
+    "fields": {
+      "recipient": 17,
+      "article": 6,
+      "title": "New article: Economic Growth Reaches Five-Year High",
+      "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "296b14c12aa44a31a95dc7c86a822898",
+      "created_at": "2025-11-03T12:04:46.590983+00:00",
+      "email_opened_at": "2025-11-03T12:04:46.793281+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 14,
+    "fields": {
+      "recipient": 16,
+      "article": 6,
+      "title": "New article: Economic Growth Reaches Five-Year High",
+      "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "d68c9f13616741a0b4cc351dbe68582a",
+      "created_at": "2025-11-03T12:04:46.224271+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 13,
+    "fields": {
+      "recipient": 22,
+      "article": 5,
+      "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+      "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+      "notification_type": "journalist",
+      "is_read": false,
+      "read_token": "c33c553f44314f4dbd204428ad32db8f",
+      "created_at": "2025-11-03T12:04:45.994448+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 12,
+    "fields": {
+      "recipient": 17,
+      "article": 5,
+      "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+      "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "a0d95379bbe242ef8e14428ca843ad71",
+      "created_at": "2025-11-03T12:04:45.707886+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 11,
+    "fields": {
+      "recipient": 19,
+      "article": 5,
+      "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+      "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "b76f0e548bf34800be946f31445204d8",
+      "created_at": "2025-11-03T12:04:45.470133+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 10,
+    "fields": {
+      "recipient": 25,
+      "article": 5,
+      "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+      "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "bc1bd5fac4ed444187a04942d6ef5da4",
+      "created_at": "2025-11-03T12:04:45.093309+00:00",
+      "email_opened_at": "2025-11-03T12:04:45.278609+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 9,
+    "fields": {
+      "recipient": 20,
+      "article": 4,
+      "title": "New article: Local Community Wins Environmental Protection Battle",
+      "message": "A new article has been published: Local Community Wins Environmental Protection Battle",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "f2e13593ee68425bbc821634ac3373a1",
+      "created_at": "2025-11-03T12:04:44.607387+00:00",
+      "email_opened_at": "2025-11-03T12:04:44.857433+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 8,
+    "fields": {
+      "recipient": 27,
+      "article": 4,
+      "title": "New article: Local Community Wins Environmental Protection Battle",
+      "message": "A new article has been published: Local Community Wins Environmental Protection Battle",
+      "notification_type": "publisher",
+      "is_read": false,
+      "read_token": "32f6268a6df246e98daccb3c1ff52641",
+      "created_at": "2025-11-03T12:04:44.344468+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 7,
+    "fields": {
+      "recipient": 19,
+      "article": 4,
+      "title": "New article: Local Community Wins Environmental Protection Battle",
+      "message": "A new article has been published: Local Community Wins Environmental Protection Battle",
+      "notification_type": "journalist",
+      "is_read": false,
+      "read_token": "e6d11af77e68401c813b6ed65e14bab6",
+      "created_at": "2025-11-03T12:04:44.094407+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 6,
+    "fields": {
+      "recipient": 22,
+      "article": 3,
+      "title": "New article: Tech Giant Announces Revolutionary AI Breakthrough",
+      "message": "A new article has been published: Tech Giant Announces Revolutionary AI Breakthrough",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "6212fd8414df450992d0f4c9c25c8ece",
+      "created_at": "2025-11-03T12:04:43.834273+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 5,
+    "fields": {
+      "recipient": 20,
+      "article": 3,
+      "title": "New article: Tech Giant Announces Revolutionary AI Breakthrough",
+      "message": "A new article has been published: Tech Giant Announces Revolutionary AI Breakthrough",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "e09892031724453cbf1868da0fdbfcc8",
+      "created_at": "2025-11-03T12:04:43.294352+00:00",
+      "email_opened_at": "2025-11-03T12:04:43.565048+00:00"
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 4,
+    "fields": {
+      "recipient": 22,
+      "article": 2,
+      "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "8500e4e61a4f4b9797631815dedd40ce",
+      "created_at": "2025-11-03T12:04:43.009274+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 3,
+    "fields": {
+      "recipient": 19,
+      "article": 2,
+      "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "notification_type": "publisher",
+      "is_read": true,
+      "read_token": "ec1b70e693c84384857d890cb567fe4d",
+      "created_at": "2025-11-03T12:04:42.759993+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 2,
+    "fields": {
+      "recipient": 18,
+      "article": 2,
+      "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "946037130b4948cfac4002f210b47715",
+      "created_at": "2025-11-03T12:04:42.527458+00:00",
+      "email_opened_at": null
+    }
+  },
+  {
+    "model": "news_app.notification",
+    "pk": 1,
+    "fields": {
+      "recipient": 17,
+      "article": 2,
+      "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+      "notification_type": "journalist",
+      "is_read": true,
+      "read_token": "84f41bf5c6fe47dbbf11ed2c7c62dfcb",
+      "created_at": "2025-11-03T12:04:42.176589+00:00",
+      "email_opened_at": null
+    }
+  }
+]

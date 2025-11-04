@@ -1,0 +1,844 @@
+[
+  {
+    "model": "news_app.customuser",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "email": "admin@example.com",
+      "first_name": "",
+      "last_name": "",
+      "role": "reader",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "date_joined": "2025-11-03T11:33:53.404351+00:00",
+      "last_login": "2025-11-03T17:35:57.898862+00:00",
+      "password": "pbkdf2_sha256$1000000$RldAsuTpjHz2L1I35CdUNp$UzUp3+lci9audWk6n/SyNq2XXykTlH9xQyWm9So4ZZY=",
+      "bio": null,
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        20
+      ],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 2,
+    "fields": {
+      "username": "editor1",
+      "email": "editor@example.com",
+      "first_name": "John",
+      "last_name": "Editor",
+      "role": "editor",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T11:34:05.629184+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$Dovi5mYWJt9k5owyuqTZv5$Y8GvABzLXCikgBhpWq87AQsKUIDyt1Tu14po+mlb+04=",
+      "bio": null,
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 3,
+    "fields": {
+      "username": "journalist1",
+      "email": "journalist@example.com",
+      "first_name": "Jane",
+      "last_name": "Journalist",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T11:34:07.782494+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$yc9D9aqByTo3zwcvMSQIVI$g5kGbWgOlmEpmxEgrtV1LgFsCH0wvH1v/IJkEevZi+A=",
+      "bio": null,
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 4,
+    "fields": {
+      "username": "reader1",
+      "email": "reader@example.com",
+      "first_name": "Bob",
+      "last_name": "Reader",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T11:34:09.338916+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$fjtUU5SJt6fOtkuFG1j9cr$nk1j1ZRp8Brx0c7q+ZZ/Nf2DtLV6P5/AGR1aUmsLNos=",
+      "bio": null,
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        20,
+        1
+      ],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 5,
+    "fields": {
+      "username": "journalist_1",
+      "email": "john.smith@example.com",
+      "first_name": "John",
+      "last_name": "Smith",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:02:46.453936+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$kskUoUoCW2A72Jch0xjS3d$A2Usv7gEMaTddBip3CIxbOw1mi/j4JRzSojTJJvbyoc=",
+      "bio": "Experienced journalist specializing in environment",
+      "profile_picture": null,
+      "publisher": 5,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 6,
+    "fields": {
+      "username": "journalist_2",
+      "email": "sarah.johnson@example.com",
+      "first_name": "Sarah",
+      "last_name": "Johnson",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:02:49.817124+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$C3s47LYj0Mtz47nv9a0Pe6$vmzmyFOimfND5C3P/lxkIDceJRMnn89M6lDHYWn2UBQ=",
+      "bio": "Experienced journalist specializing in education",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 7,
+    "fields": {
+      "username": "journalist_3",
+      "email": "michael.brown@example.com",
+      "first_name": "Michael",
+      "last_name": "Brown",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:02:53.143680+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$HVmNWJIjmUEz2OhRhiUYhC$aoQZQUtnLo31wc9AVwz4ooWdyHAbGlt6KT7xS+xMtUQ=",
+      "bio": "Experienced journalist specializing in business",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 8,
+    "fields": {
+      "username": "journalist_4",
+      "email": "emily.davis@example.com",
+      "first_name": "Emily",
+      "last_name": "Davis",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:02:56.121300+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$NDBOkUbvt8jlLDMK6UavkD$6o2YSskpdFSeaX2Ou5MVJ26AL9EDh1ZW7sNEBkjDDXE=",
+      "bio": "Experienced journalist specializing in sports",
+      "profile_picture": null,
+      "publisher": 1,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 9,
+    "fields": {
+      "username": "journalist_5",
+      "email": "david.wilson@example.com",
+      "first_name": "David",
+      "last_name": "Wilson",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:02:58.953412+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$TgblLH20rcElTIGK0UIV02$xla8sbWTbrMQKtDcN7GgBqthaE2nWpitDiwgLwLDZIE=",
+      "bio": "Experienced journalist specializing in breaking news",
+      "profile_picture": null,
+      "publisher": 5,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 10,
+    "fields": {
+      "username": "journalist_6",
+      "email": "lisa.anderson@example.com",
+      "first_name": "Lisa",
+      "last_name": "Anderson",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:01.611415+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$cvVV1Yx5774hUyvRE3o3jh$It2HY8GZVBagq419UC53KnNKCQ0UzCkHbOVnXThEQ8I=",
+      "bio": "Experienced journalist specializing in science",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 11,
+    "fields": {
+      "username": "journalist_7",
+      "email": "james.miller@example.com",
+      "first_name": "James",
+      "last_name": "Miller",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:04.346249+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$6lCybTMcvkySTRjQFmUURY$hHbXAu/m4QBoCxo1/+80viI5ST/Z3LgvBaDx3KGJr1s=",
+      "bio": "Experienced journalist specializing in education",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 12,
+    "fields": {
+      "username": "journalist_8",
+      "email": "jennifer.garcia@example.com",
+      "first_name": "Jennifer",
+      "last_name": "Garcia",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:07.251326+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$EpyfIZ19RLUWiphENQP7QM$RUcTxEo5ray5q+h/hEtgtGtYDWPZjhf5cSZnjftDYsU=",
+      "bio": "Experienced journalist specializing in local news",
+      "profile_picture": null,
+      "publisher": 6,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 13,
+    "fields": {
+      "username": "journalist_9",
+      "email": "robert.martinez@example.com",
+      "first_name": "Robert",
+      "last_name": "Martinez",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:10.500351+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$bp6LCsrmNg6r7C44c4onUr$mVgs4dd28wN1Lq8uUaR6n2XrjwKRbeEPHzmLB4qw4iU=",
+      "bio": "Experienced journalist specializing in science",
+      "profile_picture": null,
+      "publisher": 20,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 14,
+    "fields": {
+      "username": "journalist_10",
+      "email": "maria.rodriguez@example.com",
+      "first_name": "Maria",
+      "last_name": "Rodriguez",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:13.691200+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$vtlPhjYNPrBVb6svzyaPHn$xcUpc9whtJOX8NJg8VlHGJKyo/NWSqYbM+E3hXEwEBQ=",
+      "bio": "Experienced journalist specializing in technology",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 15,
+    "fields": {
+      "username": "journalist_11",
+      "email": "christopher.lee@example.com",
+      "first_name": "Christopher",
+      "last_name": "Lee",
+      "role": "journalist",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:16.318108+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$nWr0WHekBHBMItvI9MnVr4$WPfuP2/slr3WYwsg9GrcEJJvIXqUy4FDgOGUKK5kBks=",
+      "bio": "Experienced journalist specializing in opinion",
+      "profile_picture": null,
+      "publisher": 2,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 16,
+    "fields": {
+      "username": "reader_1",
+      "email": "reader1@example.com",
+      "first_name": "Reader1",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:18.978805+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$kVTMT6zuRy5Hhfw2jPV6yX$LmimaK9jRHdbVvDHj0WBUjAvMex5okKgJMvY2VjtYnc=",
+      "bio": "Avid news reader interested in health",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        9,
+        1,
+        23
+      ],
+      "subscribed_journalists": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 17,
+    "fields": {
+      "username": "reader_2",
+      "email": "reader2@example.com",
+      "first_name": "Reader2",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:22.213528+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$3vixyPj7REizOKFn4DJMO7$S0QcShJFMQvjk2Nz2juZidIiQolIkD2F7Kv9QGsYrwM=",
+      "bio": "Avid news reader interested in sports",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        4,
+        13,
+        19,
+        11,
+        23
+      ],
+      "subscribed_journalists": [
+        6,
+        9,
+        13
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 18,
+    "fields": {
+      "username": "reader_3",
+      "email": "reader3@example.com",
+      "first_name": "Reader3",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:26.048783+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$30yfV8gxHlScQMHo2pk0IF$MelFTKBh57cPI5hEsqSGTk6h3hVLx6dNTfUD526iqKk=",
+      "bio": "Avid news reader interested in opinion",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        4,
+        9,
+        16,
+        12,
+        21
+      ],
+      "subscribed_journalists": [
+        6
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 19,
+    "fields": {
+      "username": "reader_4",
+      "email": "reader4@example.com",
+      "first_name": "Reader4",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:31.531840+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$wyXctw3C0W7oSoQ6s8LlvC$/uMOjOOROoft7X+bQLqpyYr0T2LSNVG647eF2cLNDIc=",
+      "bio": "Avid news reader interested in culture",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        4,
+        6,
+        5
+      ],
+      "subscribed_journalists": [
+        6,
+        8,
+        11
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 20,
+    "fields": {
+      "username": "reader_5",
+      "email": "reader5@example.com",
+      "first_name": "Reader5",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:36.083960+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$vV4mdsJMqan6Cpd1NjGOUT$Qt658DmdpdtvgUSLdWlKJQiUK75WqCMWMtKKaCc3LAU=",
+      "bio": "Avid news reader interested in travel",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        14,
+        22
+      ],
+      "subscribed_journalists": [
+        12
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 21,
+    "fields": {
+      "username": "reader_6",
+      "email": "reader6@example.com",
+      "first_name": "Reader6",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:40.243967+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$ys6YQZwkGd2dQkfNcDTjsl$MrpyJr7HtIkTE3ulIXN1+NhMsc36dRGapkU/FBfo8X8=",
+      "bio": "Avid news reader interested in education",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        20,
+        7,
+        15,
+        1,
+        23
+      ],
+      "subscribed_journalists": [
+        8,
+        10
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 22,
+    "fields": {
+      "username": "reader_7",
+      "email": "reader7@example.com",
+      "first_name": "Reader7",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:43.744829+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$yp8N8jRUICrbcvTnT04CIs$94SmB3IASrmiMGCVBU0d4Mzc/6l9XjeY5qLN5kwvNCk=",
+      "bio": "Avid news reader interested in travel",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        19,
+        14,
+        1
+      ],
+      "subscribed_journalists": [
+        6,
+        8,
+        9
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 23,
+    "fields": {
+      "username": "reader_8",
+      "email": "reader8@example.com",
+      "first_name": "Reader8",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:52.347605+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$dprOBslemi1Od8R4FgeK6m$58dLwZWTe90OFqjf2bVi82P4YoceEKxwUdCbtPiHFEs=",
+      "bio": "Avid news reader interested in travel",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        19,
+        15,
+        2
+      ],
+      "subscribed_journalists": [
+        5,
+        12
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 24,
+    "fields": {
+      "username": "reader_9",
+      "email": "reader9@example.com",
+      "first_name": "Reader9",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:56.058839+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$ERiw8bPxdD3Zz4xNQIf98L$0NeuiZzvOb0zWCU1jNiHgBg7Yk5fX87JKduQcDJq+PY=",
+      "bio": "Avid news reader interested in politics",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        11,
+        16,
+        8,
+        23
+      ],
+      "subscribed_journalists": [
+        10
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 25,
+    "fields": {
+      "username": "reader_10",
+      "email": "reader10@example.com",
+      "first_name": "Reader10",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:03:59.905944+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$4ZwGyHpR3MjsyrL3xlzCJU$1c/BzRf7GflqgrdqUbdL4pz7tOcH+ErKalt/0Cc35Ks=",
+      "bio": "Avid news reader interested in travel",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        5
+      ],
+      "subscribed_journalists": [
+        10,
+        13
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 26,
+    "fields": {
+      "username": "reader_11",
+      "email": "reader11@example.com",
+      "first_name": "Reader11",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:04:03.997309+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$fI1rXe1uRdX65gVbXTfl8c$H4YU0DCDRBTrNBwcaCgIVX+yTvvMXeZnnScaQfKfAgs=",
+      "bio": "Avid news reader interested in analysis",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        17,
+        3,
+        1,
+        21
+      ],
+      "subscribed_journalists": [
+        12,
+        13,
+        15
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 27,
+    "fields": {
+      "username": "reader_12",
+      "email": "reader12@example.com",
+      "first_name": "Reader12",
+      "last_name": "User",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:04:07.547527+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$ou7c2jRqosDEGqk9OKKJ5U$8adhcQLaSGTrYhfUxQoVzWsO0vpMp5xD7wLgm0bwRj8=",
+      "bio": "Avid news reader interested in culture",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        22
+      ],
+      "subscribed_journalists": [
+        5,
+        10
+      ]
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 28,
+    "fields": {
+      "username": "editor_1",
+      "email": "editor1@example.com",
+      "first_name": "Editor1",
+      "last_name": "Chief",
+      "role": "editor",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:04:10.670688+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$nV4fshLlWxv4CIOVXR76UO$zCn1ZwZMocK/LVhxtYl7xFZhJh6sH01F1hYI05fud0w=",
+      "bio": "Senior editor with expertise in editorial management",
+      "profile_picture": null,
+      "publisher": 2,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 29,
+    "fields": {
+      "username": "editor_2",
+      "email": "editor2@example.com",
+      "first_name": "Editor2",
+      "last_name": "Chief",
+      "role": "editor",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T12:04:13.368156+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$jM3K66gpuIvQZGI8OVET85$rHglZNPkRQtajCyZIEXavf/aMEZqqJ3/3ATfgETzrmc=",
+      "bio": "Senior editor with expertise in editorial management",
+      "profile_picture": null,
+      "publisher": 1,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 30,
+    "fields": {
+      "username": "superuser_2",
+      "email": "admin2@example.com",
+      "first_name": "Admin2",
+      "last_name": "User",
+      "role": "editor",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "date_joined": "2025-11-03T12:04:16.238890+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$9SORdsrZYN4ghJnQrDvo3K$5QDXGxJRKxZfkrVYFnSIozL7tG7qhtlcDjCCwfWIXYU=",
+      "bio": "System administrator",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 31,
+    "fields": {
+      "username": "superuser_3",
+      "email": "admin3@example.com",
+      "first_name": "Admin3",
+      "last_name": "User",
+      "role": "editor",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "date_joined": "2025-11-03T12:04:19.006255+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$Lqf2Un9Cx67ohVI1GZ7GER$4Qh5yqAOmsZIG/GoahMSdNeVIuHVKS6bBUNIRvWX1Ec=",
+      "bio": "System administrator",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 32,
+    "fields": {
+      "username": "superuser_4",
+      "email": "admin4@example.com",
+      "first_name": "Admin4",
+      "last_name": "User",
+      "role": "editor",
+      "is_staff": true,
+      "is_active": true,
+      "is_superuser": true,
+      "date_joined": "2025-11-03T12:04:21.653574+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$hIuju05XAG1JynmIxSG6Iy$LWVTQ2lNfAgyBPpudkrFXPhKzQnXox4CAtyN3yeT0uA=",
+      "bio": "System administrator",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 33,
+    "fields": {
+      "username": "yadavthapa",
+      "email": "hemjaliyadav@yahoo.com.com",
+      "first_name": "yadav",
+      "last_name": "thapa",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T13:37:07.256411+00:00",
+      "last_login": "2025-11-03T13:37:10.681765+00:00",
+      "password": "pbkdf2_sha256$1000000$bk3ZDi6RNlLAhQ2ZeK9Jws$XXJViKXr0Nj0JDRc/F7rGMSBz+HfwuOJoH1clouEWjc=",
+      "bio": "",
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [],
+      "subscribed_journalists": []
+    }
+  },
+  {
+    "model": "news_app.customuser",
+    "pk": 40,
+    "fields": {
+      "username": "hemjali_test",
+      "email": "hemjaliyadav@yahoo.com",
+      "first_name": "Hemjali",
+      "last_name": "Yadav",
+      "role": "reader",
+      "is_staff": false,
+      "is_active": true,
+      "is_superuser": false,
+      "date_joined": "2025-11-03T17:58:24.101141+00:00",
+      "last_login": null,
+      "password": "pbkdf2_sha256$1000000$dThsN6NAQ6OSjUGxiBMTTm$IeSoxxJ/2hUQoDBYhR7RiquHt2gKU7h5w/Wrwz32I68=",
+      "bio": null,
+      "profile_picture": null,
+      "publisher": null,
+      "subscribed_publishers": [
+        20
+      ],
+      "subscribed_journalists": []
+    }
+  }
+]

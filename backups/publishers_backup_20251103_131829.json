@@ -1,0 +1,485 @@
+[
+  {
+    "model": "news_app.publisher",
+    "pk": 20,
+    "fields": {
+      "name": "Agriculture & Farming News",
+      "description": "Agricultural news, farming techniques and rural development",
+      "website": "https://agrinews.com",
+      "founded_date": "2022-11-15",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:45.570305+00:00",
+      "updated_at": "2025-11-03T12:02:45.570343+00:00",
+      "staff_members": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 17,
+    "fields": {
+      "name": "Automotive News Network",
+      "description": "Car reviews, automotive industry news and vehicle launches",
+      "website": "https://autonews.com",
+      "founded_date": "2018-09-20",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:44.574103+00:00",
+      "updated_at": "2025-11-03T12:02:44.574137+00:00",
+      "staff_members": [
+        2,
+        7,
+        8,
+        9,
+        10,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 4,
+    "fields": {
+      "name": "Business Today",
+      "description": "Business news, market analysis and financial updates",
+      "website": "https://businesstoday.com",
+      "founded_date": "2017-11-04",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:39.558659+00:00",
+      "updated_at": "2025-11-03T12:02:39.558738+00:00",
+      "staff_members": [
+        10,
+        11,
+        12,
+        13,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 7,
+    "fields": {
+      "name": "Cultural Heritage News",
+      "description": "Arts, culture and heritage preservation news",
+      "website": "https://culturalnews.com",
+      "founded_date": "2019-04-22",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:40.767504+00:00",
+      "updated_at": "2025-11-03T12:02:40.767603+00:00",
+      "staff_members": [
+        2,
+        3,
+        13,
+        14,
+        15,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 9,
+    "fields": {
+      "name": "Education Chronicle",
+      "description": "Educational news, policy updates and academic achievements",
+      "website": "https://educhronicle.com",
+      "founded_date": "2016-04-18",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:41.406998+00:00",
+      "updated_at": "2025-11-03T12:02:41.407025+00:00",
+      "staff_members": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 13,
+    "fields": {
+      "name": "Entertainment Buzz",
+      "description": "Entertainment industry news, celebrity updates and reviews",
+      "website": "https://entertainmentbuzz.com",
+      "founded_date": "2022-08-15",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:42.682494+00:00",
+      "updated_at": "2025-11-03T12:02:42.682556+00:00",
+      "staff_members": [
+        7,
+        8,
+        9,
+        10,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 6,
+    "fields": {
+      "name": "Environmental Watch",
+      "description": "Environmental news, climate change and sustainability",
+      "website": "https://envwatch.com",
+      "founded_date": "2021-01-28",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:40.404404+00:00",
+      "updated_at": "2025-11-03T12:02:40.404527+00:00",
+      "staff_members": [
+        2,
+        10,
+        11,
+        12,
+        13,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 19,
+    "fields": {
+      "name": "Fashion Forward",
+      "description": "Fashion trends, designer news and style guides",
+      "website": "https://fashionforward.com",
+      "founded_date": "2021-07-08",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:45.134719+00:00",
+      "updated_at": "2025-11-03T12:02:45.134768+00:00",
+      "staff_members": [
+        2,
+        3,
+        13,
+        14,
+        15,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 14,
+    "fields": {
+      "name": "Financial Express",
+      "description": "Stock market news, investment tips and economic analysis",
+      "website": "https://financialexpress.com",
+      "founded_date": "2024-03-05",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:42.949564+00:00",
+      "updated_at": "2025-11-03T12:02:42.949664+00:00",
+      "staff_members": [
+        3,
+        5,
+        6,
+        7,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 11,
+    "fields": {
+      "name": "Food & Lifestyle Magazine",
+      "description": "Culinary news, recipes and lifestyle trends",
+      "website": "https://foodlifestyle.com",
+      "founded_date": "2017-06-30",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:42.137592+00:00",
+      "updated_at": "2025-11-03T12:02:42.137616+00:00",
+      "staff_members": [
+        2,
+        7,
+        8,
+        9,
+        10,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 3,
+    "fields": {
+      "name": "Global Sports Network",
+      "description": "International sports news and live coverage",
+      "website": "https://globalsports.com",
+      "founded_date": "2022-03-17",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:39.148478+00:00",
+      "updated_at": "2025-11-03T12:02:39.148515+00:00",
+      "staff_members": [
+        2,
+        10,
+        11,
+        12,
+        13,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 5,
+    "fields": {
+      "name": "Health & Wellness Tribune",
+      "description": "Latest health news, medical breakthroughs and wellness tips",
+      "website": "https://healthtribune.com",
+      "founded_date": "2021-08-08",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:39.983177+00:00",
+      "updated_at": "2025-11-03T12:02:39.983282+00:00",
+      "staff_members": [
+        3,
+        13,
+        14,
+        15,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 16,
+    "fields": {
+      "name": "International Herald",
+      "description": "World news, international affairs and diplomatic updates",
+      "website": "https://internationalherald.com",
+      "founded_date": "2019-04-17",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:44.100472+00:00",
+      "updated_at": "2025-11-03T12:02:44.100513+00:00",
+      "staff_members": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 15,
+    "fields": {
+      "name": "Local Community News",
+      "description": "Community events, local government and neighborhood updates",
+      "website": "https://localcommunitynews.com",
+      "founded_date": "2016-12-20",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:43.244555+00:00",
+      "updated_at": "2025-11-03T12:02:43.244675+00:00",
+      "staff_members": [
+        2,
+        7,
+        8,
+        9,
+        10,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 12,
+    "fields": {
+      "name": "Political Observer",
+      "description": "Political news, analysis and government updates",
+      "website": "https://politicalobserver.com",
+      "founded_date": "2016-08-13",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:42.319810+00:00",
+      "updated_at": "2025-11-03T12:02:42.319845+00:00",
+      "staff_members": [
+        10,
+        11,
+        12,
+        13,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 18,
+    "fields": {
+      "name": "Real Estate Today",
+      "description": "Property news, market trends and real estate investment",
+      "website": "https://realestatetoday.com",
+      "founded_date": "2023-02-26",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:44.882215+00:00",
+      "updated_at": "2025-11-03T12:02:44.882281+00:00",
+      "staff_members": [
+        2,
+        3,
+        13,
+        14,
+        15,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 8,
+    "fields": {
+      "name": "Science & Innovation Hub",
+      "description": "Scientific discoveries and technological innovations",
+      "website": "https://sciencehub.com",
+      "founded_date": "2024-10-21",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:41.185399+00:00",
+      "updated_at": "2025-11-03T12:02:41.185435+00:00",
+      "staff_members": [
+        2,
+        3,
+        5,
+        6,
+        7,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 22,
+    "fields": {
+      "name": "Senior Citizens Today",
+      "description": "News and resources for senior citizens",
+      "website": "https://seniorstoday.com",
+      "founded_date": "2023-09-25",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:46.002859+00:00",
+      "updated_at": "2025-11-03T12:02:46.002896+00:00",
+      "staff_members": [
+        7,
+        8,
+        9,
+        10,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 1,
+    "fields": {
+      "name": "Tech News Daily",
+      "description": "Leading technology news and analysis",
+      "website": "https://technews.example.com",
+      "founded_date": null,
+      "logo": null,
+      "created_at": "2025-11-03T11:34:05.561018+00:00",
+      "updated_at": "2025-11-03T11:34:05.561057+00:00",
+      "staff_members": [
+        2,
+        10,
+        11,
+        12,
+        13,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 2,
+    "fields": {
+      "name": "The Himalayan Times",
+      "description": "Nepal's leading English daily newspaper covering national and international news",
+      "website": "https://thehimalayantimes.com",
+      "founded_date": "2021-04-21",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:38.760554+00:00",
+      "updated_at": "2025-11-03T12:02:38.760590+00:00",
+      "staff_members": [
+        2,
+        3,
+        13,
+        14,
+        15,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 10,
+    "fields": {
+      "name": "Travel & Tourism Times",
+      "description": "Travel news, destination guides and tourism industry updates",
+      "website": "https://traveltimes.com",
+      "founded_date": "2016-08-31",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:41.590424+00:00",
+      "updated_at": "2025-11-03T12:02:41.591035+00:00",
+      "staff_members": [
+        3,
+        5,
+        6,
+        7,
+        28,
+        29
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 23,
+    "fields": {
+      "name": "Women's Empowerment News",
+      "description": "Women's rights, achievements and empowerment stories",
+      "website": "https://womenempowerment.com",
+      "founded_date": "2018-02-05",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:46.259411+00:00",
+      "updated_at": "2025-11-03T12:02:46.259453+00:00",
+      "staff_members": [
+        2,
+        7,
+        8,
+        9,
+        10,
+        28
+      ]
+    }
+  },
+  {
+    "model": "news_app.publisher",
+    "pk": 21,
+    "fields": {
+      "name": "Youth Voice",
+      "description": "News and stories from the youth perspective",
+      "website": "https://youthvoice.com",
+      "founded_date": "2016-05-18",
+      "logo": null,
+      "created_at": "2025-11-03T12:02:45.803274+00:00",
+      "updated_at": "2025-11-03T12:02:45.803403+00:00",
+      "staff_members": [
+        2,
+        10,
+        11,
+        12,
+        13,
+        29
+      ]
+    }
+  }
+]

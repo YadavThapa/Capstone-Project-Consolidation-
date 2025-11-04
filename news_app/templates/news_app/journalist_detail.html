@@ -1,0 +1,138 @@
+{% extends 'news_app/base.html' %}
+
+{% block title %}{{ journalist.get_full_name|default:journalist.username }} - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-start mb-3">
+                        <div class="d-flex align-items-center">
+                            {% if journalist.profile_picture %}
+                                <img src="{{ journalist.profile_picture.url }}" 
+                                     alt="{{ journalist.get_full_name }}" 
+                                     class="rounded-circle me-3" 
+                                     style="width: 80px; height: 80px; object-fit: cover;">
+                            {% else %}
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                     style="width: 80px; height: 80px;">
+                                    <i class="bi bi-person-fill text-white fs-2"></i>
+                                </div>
+                            {% endif %}
+                            <div>
+                                <h1 class="card-title mb-2">
+                                    {{ journalist.get_full_name|default:journalist.username }}
+                                </h1>
+                                {% if journalist.publisher %}
+                                    <p class="text-muted mb-2">
+                                        <i class="bi bi-building me-1"></i>
+                                        <a href="{% url 'publisher_detail' journalist.publisher.pk %}" class="text-muted">
+                                            {{ journalist.publisher.name }}
+                                        </a>
+                                    </p>
+                                {% else %}
+                                    <p class="text-muted mb-2">
+                                        <i class="bi bi-star me-1"></i>Independent Journalist
+                                    </p>
+                                {% endif %}
+                                {% if journalist.bio %}
+                                    <p class="text-muted">{{ journalist.bio }}</p>
+                                {% endif %}
+                            </div>
+                        </div>
+                        
+                        <!-- Subscription Button -->
+                        {% if user.is_authenticated and user.role == 'reader' %}
+                            <div>
+                                <form method="post" action="{% url 'toggle_journalist_subscription' journalist.pk %}">
+                                    {% csrf_token %}
+                                    {% if is_subscribed %}
+                                        <button type="submit" class="btn btn-outline-danger">
+                                            <i class="bi bi-heart-fill me-1"></i>Unsubscribe
+                                        </button>
+                                    {% else %}
+                                        <button type="submit" class="btn btn-primary">
+                                            <i class="bi bi-heart me-1"></i>Follow
+                                        </button>
+                                    {% endif %}
+                                </form>
+                            </div>
+                        {% elif not user.is_authenticated %}
+                            <div>
+                                <a href="{% url 'login' %}" class="btn btn-outline-primary">
+                                    <i class="bi bi-box-arrow-in-right me-1"></i>Login to Follow
+                                </a>
+                            </div>
+                        {% endif %}
+                    </div>
+                    
+                    <div class="row text-center">
+                        <div class="col-6">
+                            <h5 class="text-primary">{{ articles.count }}</h5>
+                            <small class="text-muted">Articles</small>
+                        </div>
+                        <div class="col-6">
+                            <h5 class="text-success">{{ journalist.journalist_subscribers.count }}</h5>
+                            <small class="text-muted">Followers</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Articles Section -->
+            <h3 class="mb-3">Recent Articles</h3>
+            {% for article in articles %}
+                <div class="card mb-3 shadow-sm">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <h5 class="card-title">
+                                    <a href="{% url 'article_detail' article.slug %}" class="text-decoration-none">
+                                        {{ article.title }}
+                                    </a>
+                                </h5>
+                                <p class="card-text text-muted">{{ article.summary|truncatechars:150 }}</p>
+                                <small class="text-muted">
+                                    <i class="bi bi-calendar me-1"></i>{{ article.published_at|date:"M j, Y" }}
+                                    {% if article.publisher %}
+                                        <i class="bi bi-building ms-3 me-1"></i>{{ article.publisher.name }}
+                                    {% endif %}
+                                </small>
+                            </div>
+                            <div class="col-md-4 d-flex align-items-center justify-content-end">
+                                <a href="{% url 'article_detail' article.slug %}" class="btn btn-outline-primary">
+                                    Read More
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% empty %}
+                <div class="text-center py-4">
+                    <i class="bi bi-newspaper fs-1 text-muted"></i>
+                    <h4 class="text-muted mt-3">No Articles Yet</h4>
+                    <p class="text-muted">This journalist hasn't published any articles yet.</p>
+                </div>
+            {% endfor %}
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-pencil-square me-2"></i>Other Journalists
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <p class="text-muted">Discover more talented journalists and writers.</p>
+                    <a href="{% url 'journalist_list' %}" class="btn btn-outline-primary btn-sm">
+                        View All Journalists
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

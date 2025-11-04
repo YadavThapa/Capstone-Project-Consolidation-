@@ -1,0 +1,89 @@
+{% extends 'news_app/base.html' %}
+
+{% block title %}Journalists - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <!-- Member-only section notification -->
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="alert alert-info d-flex align-items-center">
+                <i class="bi bi-shield-lock me-2"></i>
+                <div>
+                    <strong>Member Section:</strong> This page is available to registered users only. 
+                    You can explore journalists, follow your favorite reporters, and get personalized news updates.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="mb-0">
+                    <i class="bi bi-pencil-square me-2"></i>Journalists
+                </h1>
+                <p class="text-muted mb-0">{{ journalists.count }} journalist{{ journalists.count|pluralize }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        {% for journalist in journalists %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <div class="d-flex align-items-center mb-3">
+                        {% if journalist.profile_picture %}
+                            <img src="{{ journalist.profile_picture.url }}" 
+                                 alt="{{ journalist.get_full_name }}" 
+                                 class="rounded-circle me-3" 
+                                 style="width: 50px; height: 50px; object-fit: cover;">
+                        {% else %}
+                            <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center me-3" 
+                                 style="width: 50px; height: 50px;">
+                                <i class="bi bi-person-fill text-white"></i>
+                            </div>
+                        {% endif %}
+                        <div>
+                            <h5 class="card-title mb-1">
+                                <a href="{% url 'journalist_detail' journalist.pk %}" class="text-decoration-none">
+                                    {{ journalist.get_full_name|default:journalist.username }}
+                                </a>
+                            </h5>
+                            {% if journalist.publisher %}
+                                <small class="text-muted">{{ journalist.publisher.name }}</small>
+                            {% else %}
+                                <small class="text-muted">Independent Journalist</small>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    {% if journalist.bio %}
+                        <p class="card-text text-muted">{{ journalist.bio|truncatechars:100 }}</p>
+                    {% endif %}
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            <i class="bi bi-people me-1"></i>
+                            {{ journalist.journalist_subscribers.count }} subscriber{{ journalist.journalist_subscribers.count|pluralize }}
+                        </small>
+                        <a href="{% url 'journalist_detail' journalist.pk %}" class="btn btn-primary btn-sm">
+                            View Profile
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="text-center py-5">
+                <i class="bi bi-pencil-square fs-1 text-muted"></i>
+                <h3 class="text-muted mt-3">No Journalists Found</h3>
+                <p class="text-muted">There are currently no journalists available.</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

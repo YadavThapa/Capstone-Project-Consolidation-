@@ -1,0 +1,107 @@
+{% extends 'news_app/base.html' %}
+
+{% block title %}{{ article.title|striptags }} - The Himalayan Times{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <header class="mb-4">
+            <h1 class="display-5">{{ article.title|striptags }}
+                {% if can_approve %}
+                    {% if article.is_approved %}
+                        <span class="badge bg-success ms-2">Approved</span>
+                    {% else %}
+                        <span class="badge bg-warning text-dark ms-2">Pending approval</span>
+                    {% endif %}
+                {% endif %}
+            </h1>
+                {% if can_approve and not article.is_approved %}
+                    <form method="post" action="{% url 'approve_article' article.id %}" class="ajax-approve-form mt-2">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="approve">
+                        <button type="submit" class="btn btn-sm btn-primary">Approve &amp; Notify Subscribers</button>
+                    </form>
+                {% endif %}
+                <p class="text-muted small mb-1">By {{ article.author.get_full_name|default:article.author.username }}{% if article.publisher %} | {{ article.publisher.name }}{% endif %}</p>
+                {% if can_approve and article.is_approved and article.approved_by %}
+                    <p class="text-muted small mb-1">Approved by {{ article.approved_by.get_full_name|default:article.approved_by.username }} on {{ article.approved_at|date:"F j, Y, P" }}</p>
+                {% endif %}
+                <p class="text-muted small">{{ article.published_at|date:"F d, Y" }} • {{ article.views_count }} views
+                    {% if can_approve and article.is_approved and article.approved_by %}
+                        &middot; Approved by {{ article.approved_by.get_full_name|default:article.approved_by.username }} on {{ article.approved_at|date:"F j, Y, P" }}
+                    {% endif %}
+            </p>
+        </header>
+
+        {% if article.featured_image %}
+            <div class="mb-4">
+                <img src="{{ article.featured_image.url }}" class="img-fluid rounded shadow-sm" alt="{{ article.title|striptags }}">
+            </div>
+        {% endif %}
+
+    <p class="lead">{{ article.summary|striptags }}</p>
+
+        <div class="article-content mb-5">
+            {{ article.content|striptags|linebreaks }}
+        </div>
+
+        <div class="mb-4">
+            <!-- Public share links: open platform share dialogs in a new tab -->
+            <a href="#" class="btn btn-sm btn-outline-primary me-1 share-link"
+               data-network="x"
+               data-path="{% url 'article_detail' article.slug %}"
+               data-title="{{ article.title|striptags }}"
+               title="Share on X"
+               rel="noopener noreferrer"
+               target="_blank">
+                <i class="bi bi-twitter"></i> <span class="small ms-1">Share</span>
+            </a>
+
+            <a href="#" class="btn btn-sm btn-outline-primary share-link"
+               data-network="facebook"
+               data-path="{% url 'article_detail' article.slug %}"
+               data-title="{{ article.title|striptags }}"
+               title="Share on Facebook"
+               rel="noopener noreferrer"
+               target="_blank">
+                <i class="bi bi-facebook"></i> <span class="small ms-1">Share</span>
+            </a>
+        </div>
+
+        {% if article.tags %}
+            <div class="mb-5">
+                <strong>Tags:</strong>
+                {% for tag in article.tags.split %}
+                    <a href="#" class="badge bg-outline-secondary me-1">{{ tag }}</a>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5>Related stories</h5>
+                <div class="list-unstyled mb-0">
+                    {% for a in related_articles %}
+                        <div class="mb-3 d-flex align-items-start justify-content-between">
+                            <div class="flex-grow-1 me-3">
+                                <strong class="d-block"><a href="{% url 'article_detail' a.slug %}">{{ a.title|striptags|truncatechars:120 }}</a></strong>
+                                <p class="mb-0 small text-muted">{% if a.summary %}{{ a.summary|striptags|truncatewords:100 }}{% else %}{{ a.content|striptags|truncatewords:100 }}{% endif %}</p>
+                            </div>
+                            {% if a.source_url %}
+                                <div class="ms-2">
+                                    <a class="btn btn-sm btn-outline-secondary" href="{{ a.source_url }}" target="_blank" rel="noopener">Original ↗</a>
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% empty %}
+                        <div class="text-muted">No related stories available.</div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+{% endblock %}

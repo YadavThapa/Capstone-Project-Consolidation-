@@ -1,0 +1,384 @@
+{% extends 'news_app/base.html' %}
+
+{% block title %}Latest News - NewsHub{% endblock %}
+
+{% block content %}
+<!-- Breaking News Ticker -->
+<div class="breaking-news fade-in-up">
+    <div class="breaking-text">🚨 Latest: Beautiful clear skies over Pokhara today - Stay updated with The Himalayan Times</div>
+</div>
+
+<!-- Full width hero banner -->
+<div class="hero-banner fade-in" style="background-image: url('https://live.staticflickr.com/8095/8480958675_49999916ac_o.jpg');">
+    <div class="hero-overlay">
+        <div class="hero-content text-white">
+            <h1 class="display-4 mb-3">The Himalayan News</h1>
+            <p class="lead mb-4">Breaking news and in-depth coverage from the Himalayas 🏔️</p>
+            <div class="d-flex justify-content-end align-items-center flex-wrap gap-2">
+                <span class="badge bg-light text-dark px-3 py-2">
+                    <i class="bi bi-newspaper me-1"></i>
+                    Digital Edition
+                </span>
+                <span class="badge bg-primary px-3 py-2">
+                    <i class="bi bi-globe me-1"></i>
+                    Live Updates
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="py-3 mb-4 bg-light rounded-3 fade-in">
+    <div class="site-container d-flex justify-content-between align-items-center">
+        <div>
+            <h1 class="h3 mb-0">Latest News</h1>
+            <p class="small text-muted">Curated headlines and in-depth reporting.</p>
+        <div class="date-strip py-3 bg-white border-bottom">
+            <div class="site-container d-flex align-items-center">
+                <div class="date-text">
+                    <div class="date-main">{% now "l, F d, Y" %}</div>
+                </div>
+            </div>
+        </div>
+ 
+        </div>
+        <div class="search-container">
+            <form method="get" action="." class="d-flex">
+                <div class="input-group">
+                    <span class="input-group-text bg-white border-end-0">
+                        <i class="bi bi-search text-muted"></i>
+                    </span>
+                    <input name="q" class="form-control border-start-0" type="search" placeholder="Search articles, topics, authors..." aria-label="Search" value="{{ search_query }}">
+                </div>
+                <button class="btn btn-primary ms-2" type="submit">
+                    <i class="bi bi-search me-1"></i>Search
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- News Categories Navigation -->
+<section class="topics-section py-3 bg-light border-bottom fade-in">
+    <div class="site-container">
+        <nav class="topics-nav">
+            <a class="nav-link {% if not current_category %}active{% endif %}" href="{% url 'article_list' %}">
+                <i class="bi bi-house me-1"></i>All News
+            </a>
+            {% for category in categories %}
+            <a class="nav-link {% if current_category == category %}active{% endif %}" 
+               href="{% url 'article_list' %}?category={{ category|urlencode }}">
+                {% if category == 'Breaking News' %}
+                    <i class="bi bi-exclamation-triangle me-1"></i>
+                {% elif category == 'Politics' %}
+                    <i class="bi bi-building me-1"></i>
+                {% elif category == 'Technology' %}
+                    <i class="bi bi-cpu me-1"></i>
+                {% elif category == 'Sports' %}
+                    <i class="bi bi-trophy me-1"></i>
+                {% elif category == 'Business' %}
+                    <i class="bi bi-briefcase me-1"></i>
+                {% elif category == 'Health' %}
+                    <i class="bi bi-heart-pulse me-1"></i>
+                {% elif category == 'Environment' %}
+                    <i class="bi bi-tree me-1"></i>
+                {% elif category == 'Education' %}
+                    <i class="bi bi-book me-1"></i>
+                {% elif category == 'Entertainment' %}
+                    <i class="bi bi-film me-1"></i>
+                {% elif category == 'Science' %}
+                    <i class="bi bi-atom me-1"></i>
+                {% else %}
+                    <i class="bi bi-newspaper me-1"></i>
+                {% endif %}
+                {{ category }}
+            </a>
+            {% endfor %}
+        </nav>
+    </div>
+</section>
+
+{% if current_category %}
+<section class="category-header py-2 bg-primary text-white">
+    <div class="site-container">
+        <h2 class="h5 mb-0">
+            <i class="bi bi-filter me-2"></i>{{ current_category }} News
+            <small class="ms-2 opacity-75">({{ articles|length }} articles)</small>
+        </h2>
+    </div>
+</section>
+{% endif %}
+
+{% if search_query %}
+<section class="search-header py-2 bg-info text-white">
+    <div class="site-container">
+        <h2 class="h5 mb-0">
+            <i class="bi bi-search me-2"></i>Search Results for "{{ search_query }}"
+            <small class="ms-2 opacity-75">({{ articles|length }} results)</small>
+        </h2>
+    </div>
+</section>
+{% endif %}
+
+<div class="site-container news-grid">
+    <!-- Left column now only contains sponsored/side content -->
+    <div class="left-col">
+        <div class="card mb-3">
+            <div class="card-body small text-muted">Sponsored</div>
+        </div>
+    </div>
+
+    <!-- Center content -->
+    <div class="center-col">
+        {% if articles|length > 0 %}
+            {% with featured=articles.0 %}
+                <div class="enhanced-card featured-article mb-4 fade-in-up">
+                    {% if featured.featured_image %}
+                        <div class="position-relative">
+                            <img src="{{ featured.featured_image.url }}" class="card-img-top" alt="{{ featured.title|striptags }}" style="height: 300px; object-fit: cover;" data-has-source="true" data-image-type="featured">
+                            <div class="position-absolute top-0 start-0 m-3">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-star-fill me-1"></i>Featured
+                                </span>
+                            </div>
+                        </div>
+                    {% elif featured.source_image_url %}
+                        <div class="position-relative">
+                            <img src="{{ featured.source_image_url }}" class="card-img-top" alt="{{ featured.title|striptags }}" style="height: 300px; object-fit: cover;" data-has-source="true" data-image-type="source">
+                            <div class="position-absolute top-0 start-0 m-3">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-star-fill me-1"></i>Featured
+                                </span>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&h=300&fit=crop&auto=format" class="card-img-top" alt="{{ featured.title|striptags }}" style="height: 300px; object-fit: cover;" data-image-type="fallback">
+                            <div class="position-absolute top-0 start-0 m-3">
+                                <span class="badge bg-danger">
+                                    <i class="bi bi-star-fill me-1"></i>Featured
+                                </span>
+                            </div>
+                        </div>
+                    {% endif %}
+                    <div class="card-body">
+                        <div class="article-meta">
+                            <i class="bi bi-calendar3"></i> {{ featured.published_at|date:"F d, Y" }}
+                            <span class="mx-2">•</span>
+                            <i class="bi bi-person"></i> {{ featured.author.get_full_name|default:featured.author.username }}
+                            {% if featured.publisher %}
+                                <span class="mx-2">•</span>
+                                <i class="bi bi-building"></i> {{ featured.publisher.name }}
+                            {% endif %}
+                        </div>
+                        <h2 class="card-title mb-3">{{ featured.title|striptags }}</h2>
+                        <p class="card-text mb-4">{{ featured.summary|striptags|truncatewords:25 }}</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <a href="{% url 'article_detail' featured.slug %}" class="btn btn-primary">
+                                <i class="bi bi-arrow-right me-2"></i>Read Full Story
+                            </a>
+                            <div class="share-buttons">
+                                <a href="#" class="share-btn facebook" data-platform="facebook" data-url="{% url 'article_detail' featured.slug %}" data-title="{{ featured.title|striptags }}">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a href="#" class="share-btn twitter" data-platform="twitter" data-url="{% url 'article_detail' featured.slug %}" data-title="{{ featured.title|striptags }}">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endwith %}
+        {% endif %}
+
+        <div class="row">
+            {% for article in articles|slice:"1:999" %}
+                <div class="col-12 mb-3">
+                    <div class="enhanced-card p-3 fade-in-up">
+                        <div class="row g-3">
+                            <div class="col-md-3">
+                                <div class="position-relative">
+                                    {% if article.featured_image %}
+                                        <img src="{{ article.featured_image.url }}" class="img-fluid rounded" alt="{{ article.title|striptags }}" style="height: 120px; width: 100%; object-fit: cover;" data-has-source="true" data-image-type="featured">
+                                    {% elif article.source_image_url %}
+                                        <img src="{{ article.source_image_url }}" class="img-fluid rounded" alt="{{ article.title|striptags }}" style="height: 120px; width: 100%; object-fit: cover;" data-has-source="true" data-image-type="source">>
+                                    {% else %}
+                                        {% with random_num=forloop.counter|add:article.id %}
+                                            {% if random_num|divisibleby:6 %}
+                                                <img src="https://images.unsplash.com/photo-1605538883669-825200433431?w=200&h=120&fit=crop&auto=format" class="img-fluid rounded" alt="Himalayan landscape" style="height: 120px; width: 100%; object-fit: cover;">
+                                            {% elif random_num|divisibleby:5 %}
+                                                <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=200&h=120&fit=crop&auto=format" class="img-fluid rounded" alt="Business news" style="height: 120px; width: 100%; object-fit: cover;">
+                                            {% elif random_num|divisibleby:4 %}
+                                                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=200&h=120&fit=crop&auto=format" class="img-fluid rounded" alt="Technology news" style="height: 120px; width: 100%; object-fit: cover;">
+                                            {% elif random_num|divisibleby:3 %}
+                                                <img src="https://images.unsplash.com/photo-1495020689067-958852a7765e?w=200&h=120&fit=crop&auto=format" class="img-fluid rounded" alt="World news" style="height: 120px; width: 100%; object-fit: cover;">
+                                            {% elif random_num|divisibleby:2 %}
+                                                <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=200&h=120&fit=crop&auto=format" class="img-fluid rounded" alt="Environment news" style="height: 120px; width: 100%; object-fit: cover;">
+                                            {% else %}
+                                                <img src="https://images.unsplash.com/photo-1586339949916-3e9457bef6d3?w=200&h=120&fit=crop&auto=format" class="img-fluid rounded" alt="General news" style="height: 120px; width: 100%; object-fit: cover;">
+                                            {% endif %}
+                                        {% endwith %}
+                                    {% endif %}
+                                    <div class="position-absolute bottom-0 end-0 m-2">
+                                        <span class="badge bg-primary bg-opacity-90">
+                                            <i class="bi bi-clock me-1"></i>{{ article.published_at|timesince }} ago
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="article-meta mb-2">
+                                    <i class="bi bi-calendar3"></i> {{ article.published_at|date:"F d, Y" }}
+                                    <span class="mx-2">•</span>
+                                    <i class="bi bi-person"></i> {{ article.author.get_full_name|default:article.author.username }}
+                                    {% if article.publisher %}
+                                        <span class="mx-2">•</span>
+                                        <i class="bi bi-building"></i> {{ article.publisher.name }}
+                                    {% endif %}
+                                </div>
+                                <h5 class="mb-2 fw-bold">
+                                    <a href="{% url 'article_detail' article.slug %}" class="text-decoration-none text-dark">
+                                        {{ article.title|striptags }}
+                                    </a>
+                                    {% if can_approve %}
+                                        {% if article.is_approved %}
+                                            <span class="badge bg-success ms-2">
+                                                <i class="bi bi-check-circle me-1"></i>Approved
+                                            </span>
+                                        {% else %}
+                                            <span class="badge bg-warning text-dark ms-2">
+                                                <i class="bi bi-clock me-1"></i>Pending
+                                            </span>
+                                        {% endif %}
+                                    {% endif %}
+                                </h5>
+                                <!-- Article approval functionality removed for simplified display -->
+
+                                <p class="text-muted mb-3" style="line-height: 1.6;">
+                                    {{ article.summary|striptags|truncatewords:20 }}{% if article.summary|striptags|length > 0 %}...{% endif %}
+                                </p>
+                                
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <a href="{% url 'article_detail' article.slug %}" class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-arrow-right me-1"></i>Read More
+                                    </a>
+                                    <div class="share-buttons">
+                                        <a href="#" class="share-btn facebook me-1" data-platform="facebook" data-url="{% url 'article_detail' article.slug %}" data-title="{{ article.title|striptags }}">
+                                            <i class="bi bi-facebook"></i>
+                                        </a>
+                                        <a href="#" class="share-btn twitter me-1" data-platform="twitter" data-url="{% url 'article_detail' article.slug %}" data-title="{{ article.title|striptags }}">
+                                            <i class="bi bi-twitter"></i>
+                                        </a>
+                                        <a href="#" class="share-btn linkedin" data-platform="linkedin" data-url="{% url 'article_detail' article.slug %}" data-title="{{ article.title|striptags }}">
+                                            <i class="bi bi-linkedin"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Right sidebar with weather and more -->
+    <div class="right-col">
+        <!-- Weather Widget -->
+        <div id="weather-widget" class="weather-widget fade-in-up">
+            <div class="weather-loading">
+                <div class="loading-spinner"></div>
+                <div class="mt-2">Loading weather...</div>
+            </div>
+        </div>
+        
+        <!-- Advertisement -->
+        <div class="sidebar-card fade-in-up">
+            <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1560472355-536de3962603?w=300&h=250&fit=crop&auto=format" class="img-fluid" alt="Technology Advertisement" style="border-radius: 8px;">
+                <div class="position-absolute top-0 end-0 m-2">
+                    <span class="badge bg-light text-dark" style="font-size: 0.6rem;">Advertisement</span>
+                </div>
+            </div>
+        </div>
+        <!-- Trending News -->
+        <div class="sidebar-card fade-in-up">
+            <div class="card-header">
+                <i class="bi bi-fire me-2"></i>Trending Now
+            </div>
+            <div class="card-body p-0">
+                {% for a in articles|slice:":5" %}
+                    <div class="trending-item">
+                        <div class="trending-number">{{ forloop.counter }}</div>
+                        <div>
+                            <a href="{% url 'article_detail' a.slug %}" class="text-decoration-none">
+                                <div class="fw-bold" style="font-size: 0.85rem;">{{ a.title|striptags|truncatechars:45 }}</div>
+                                <div class="text-muted" style="font-size: 0.75rem;">
+                                    <i class="bi bi-eye me-1"></i>{{ a.id }}k views
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                {% empty %}
+                    <div class="p-3 text-muted text-center">No trending articles</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Publishers -->
+        <div class="sidebar-card fade-in-up">
+            <div class="card-header">
+                <i class="bi bi-building me-2"></i>Publishers
+            </div>
+            <div class="card-body">
+                {% for p in publishers %}
+                    <div class="mb-3">
+                        <span class="fw-bold">{{ p.name }}</span>
+                        {% if p.editors.count %}
+                            <div class="small text-muted mt-1">
+                                <i class="bi bi-person me-1"></i>Editors:
+                                {% for e in p.editors.all %}
+                                    {{ e.username }}{% if not forloop.last %}, {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                {% empty %}
+                    <div class="text-muted text-center">No publishers available</div>
+                {% endfor %}
+            </div>
+        </div>
+        
+        <!-- Newsletter Signup -->
+        <div class="sidebar-card fade-in-up">
+            <div class="card-header">
+                <i class="bi bi-envelope me-2"></i>Stay Updated
+            </div>
+            <div class="card-body">
+                <p class="small mb-3">Get the latest news from Pokhara and beyond delivered to your inbox.</p>
+                <form>
+                    <div class="mb-2">
+                        <input type="email" class="form-control form-control-sm" placeholder="Enter your email">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-sm w-100">
+                        <i class="bi bi-send me-1"></i>Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Sponsored Content -->
+        <div class="sidebar-card fade-in-up">
+            <div class="position-relative">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=180&fit=crop&auto=format" class="img-fluid" alt="Business Opportunity" style="border-radius: 8px;">
+                <div class="position-absolute bottom-0 start-0 end-0 p-3" style="background: linear-gradient(transparent, rgba(0,0,0,0.7)); border-radius: 0 0 8px 8px;">
+                    <h6 class="text-white mb-1">Invest in Nepal's Future</h6>
+                    <small class="text-white-50">Sponsored Content</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

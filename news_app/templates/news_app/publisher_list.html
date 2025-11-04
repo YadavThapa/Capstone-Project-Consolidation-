@@ -1,0 +1,103 @@
+{% extends 'news_app/base.html' %}
+
+{% block title %}Publishers - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <!-- Member-only section notification -->
+    <div class="row mb-3">
+        <div class="col-12">
+            <div class="alert alert-info d-flex align-items-center">
+                <i class="bi bi-shield-lock me-2"></i>
+                <div>
+                    <strong>Member Section:</strong> This page is available to registered users only. 
+                    You can explore publishers, subscribe to your favorites, and manage your news preferences.
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-12">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h1 class="mb-0">
+                    <i class="bi bi-building me-2"></i>Publishers
+                </h1>
+                <p class="text-muted mb-0">{{ publishers.count }} publisher{{ publishers.count|pluralize }}</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        {% for publisher in publishers %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'publisher_detail' publisher.pk %}" class="text-decoration-none">
+                            {{ publisher.name }}
+                        </a>
+                    </h5>
+                    <p class="card-text text-muted">{{ publisher.description|truncatechars:100 }}</p>
+                    {% if publisher.website %}
+                        <p class="card-text">
+                            <small class="text-muted">
+                                <i class="bi bi-globe me-1"></i>
+                                <a href="{{ publisher.website }}" target="_blank" class="text-muted">
+                                    {{ publisher.website|truncatechars:30 }}
+                                </a>
+                            </small>
+                        </p>
+                    {% endif %}
+                    
+                    <!-- Staff Information -->
+                    <div class="mb-3">
+                        <div class="row text-center">
+                            <div class="col-4">
+                                <small class="d-block">
+                                    <strong class="text-info">{{ publisher.editor_count }}</strong>
+                                    <br>
+                                    <span class="text-muted">Editor{{ publisher.editor_count|pluralize }}</span>
+                                </small>
+                            </div>
+                            <div class="col-4">
+                                <small class="d-block">
+                                    <strong class="text-warning">{{ publisher.journalist_count }}</strong>
+                                    <br>
+                                    <span class="text-muted">Journalist{{ publisher.journalist_count|pluralize }}</span>
+                                </small>
+                            </div>
+                            <div class="col-4">
+                                <small class="d-block">
+                                    <strong class="text-success">{{ publisher.subscribers.count }}</strong>
+                                    <br>
+                                    <span class="text-muted">Subscriber{{ publisher.subscribers.count|pluralize }}</span>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                            <i class="bi bi-people-fill me-1"></i>
+                            {{ publisher.total_staff_count }} total staff
+                        </small>
+                        <a href="{% url 'publisher_detail' publisher.pk %}" class="btn btn-primary btn-sm">
+                            View Details
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <div class="col-12">
+            <div class="text-center py-5">
+                <i class="bi bi-building fs-1 text-muted"></i>
+                <h3 class="text-muted mt-3">No Publishers Found</h3>
+                <p class="text-muted">There are currently no publishers available.</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

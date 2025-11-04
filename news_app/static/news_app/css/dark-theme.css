@@ -1,0 +1,107 @@
+/* Dark Theme Styles for The Himalayan Times */
+.dark-theme {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --accent-color: #3b82f6;
+    --text-dark: #f1f5f9;
+    --text-light: #cbd5e1;
+    --bg-light: #0f172a;
+    --border-color: #334155;
+    --shadow-light: 0 1px 3px rgba(255,255,255,0.1);
+    --shadow-medium: 0 4px 6px rgba(255,255,255,0.1);
+    --shadow-heavy: 0 10px 15px rgba(255,255,255,0.1);
+}
+
+.dark-theme body {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+.dark-theme .enhanced-card {
+    background: #1e293b;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .sidebar-card {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .sidebar-card .card-header {
+    background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.dark-theme .weather-widget {
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+}
+
+.dark-theme .topics-nav {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .topics-nav .nav-link {
+    background: var(--bg-light);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+}
+
+.dark-theme .topics-nav .nav-link:hover {
+    background: var(--accent-color);
+    color: white;
+}
+
+.dark-theme .date-strip {
+    background: #1e293b;
+    border-color: var(--accent-color);
+}
+
+.dark-theme .form-control {
+    background: #1e293b;
+    border-color: var(--border-color);
+    color: var(--text-dark);
+}
+
+.dark-theme .form-control:focus {
+    background: #1e293b;
+    border-color: var(--accent-color);
+    color: var(--text-dark);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.dark-theme .input-group-text {
+    background: #1e293b;
+    border-color: var(--border-color);
+    color: var(--text-light);
+}
+
+.dark-theme .trending-item:hover {
+    background: #334155;
+}
+
+.dark-theme .alert-success {
+    background: rgba(34, 197, 94, 0.1);
+    border-color: #22c55e;
+    color: #86efac;
+}
+
+.dark-theme a {
+    color: #60a5fa;
+}
+
+.dark-theme a:hover {
+    color: #93c5fd;
+}
+
+.dark-theme .breaking-news {
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    border-color: #ef4444;
+    box-shadow: 0 2px 8px rgba(239, 68, 68, 0.2);
+}
+
+.dark-theme .breaking-text {
+    color: #fca5a5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}

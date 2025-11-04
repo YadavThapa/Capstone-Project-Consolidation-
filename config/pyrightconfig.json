@@ -1,0 +1,46 @@
+{
+    "include": [
+        "news_app",
+        "news_project",
+        "manage.py",
+        "scripts",
+        "tests"
+    ],
+    "exclude": [
+        "**/__pycache__",
+        "**/node_modules",
+        "**/migrations",
+        "staticfiles",
+        "media",
+        "backups",
+        "logs",
+        "**/*.pyc",
+        "**/.mypy_cache"
+    ],
+    "reportMissingModuleSource": false,
+    "reportMissingImports": "warning",
+    "reportMissingTypeStubs": "information", 
+    "reportUndefinedVariable": "error",
+    "reportUnusedImport": "information",
+    "reportUnusedVariable": "warning",
+    "reportGeneralTypeIssues": "warning",
+    "reportOptionalMemberAccess": "none",
+    "reportOptionalSubscript": "none",
+    "reportPrivateImportUsage": "none",
+    "reportMissingTypeArgument": "none",
+    "reportUnknownMemberType": "none",
+    "reportUnknownArgumentType": "none",
+    "reportUnknownVariableType": "none",
+    "reportUnknownParameterType": "none",
+    "pythonVersion": "3.13",
+    "pythonPlatform": "Windows",
+    "typeCheckingMode": "basic",
+    "autoSearchPaths": true,
+    "extraPaths": [],
+    "stubPath": "",
+    "venvPath": "",
+    "venv": "",
+    "defineConstant": {
+        "DJANGO_SETTINGS_MODULE": "news_project.settings"
+    }
+}

@@ -1,0 +1,40 @@
+[flake8]
+# Flake8 configuration for Django project
+max-line-length = 200
+exclude = 
+    migrations,
+    __pycache__,
+    manage.py,
+    settings.py,
+    .git,
+    .tox,
+    .venv,
+    venv,
+    staticfiles,
+    media,
+    */migrations/*,
+    */migrations/*.py,
+    **/migrations/**,
+    **/migrations/**/*.py,
+    news_app/migrations/,
+    news_app/migrations/*,
+    news_app/migrations/*.py,
+    0001_initial.py,
+    */0001_initial.py,
+    */0002_*.py,
+    */0003_*.py,
+    */0004_*.py,
+    */0005_*.py
+
+ignore = 
+    E501,  # line too long
+    W503,  # line break before binary operator
+    E203,  # whitespace before ':'
+    F401,  # imported but unused (common in Django)
+    E402,  # module level import not at top
+
+per-file-ignores =
+    */migrations/*.py:ALL
+    */settings/*.py:E501,F401
+    */admin.py:F401
+    */models.py:E501

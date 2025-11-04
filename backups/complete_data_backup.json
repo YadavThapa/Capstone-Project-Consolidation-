@@ -1,0 +1,2753 @@
+[
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": 1,
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": 1,
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": 1,
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": 1,
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": 2,
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": 2,
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": 2,
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": 2,
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": 3,
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": 3,
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": 3,
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": 3,
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": 4,
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": 4,
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": 4,
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": 4,
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add session",
+    "content_type": 5,
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change session",
+    "content_type": 5,
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": 5,
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view session",
+    "content_type": 5,
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 6,
+    "codename": "add_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 6,
+    "codename": "change_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 6,
+    "codename": "delete_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 6,
+    "codename": "view_token"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add Token",
+    "content_type": 7,
+    "codename": "add_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change Token",
+    "content_type": 7,
+    "codename": "change_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete Token",
+    "content_type": 7,
+    "codename": "delete_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view Token",
+    "content_type": 7,
+    "codename": "view_tokenproxy"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add contact message",
+    "content_type": 8,
+    "codename": "add_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change contact message",
+    "content_type": 8,
+    "codename": "change_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete contact message",
+    "content_type": 8,
+    "codename": "delete_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view contact message",
+    "content_type": 8,
+    "codename": "view_contactmessage"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add user",
+    "content_type": 9,
+    "codename": "add_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change user",
+    "content_type": 9,
+    "codename": "change_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": 9,
+    "codename": "delete_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view user",
+    "content_type": 9,
+    "codename": "view_customuser"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add article",
+    "content_type": 10,
+    "codename": "add_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change article",
+    "content_type": 10,
+    "codename": "change_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete article",
+    "content_type": 10,
+    "codename": "delete_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view article",
+    "content_type": 10,
+    "codename": "view_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 41,
+  "fields": {
+    "name": "Can approve articles",
+    "content_type": 10,
+    "codename": "approve_article"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 42,
+  "fields": {
+    "name": "Can add notification",
+    "content_type": 11,
+    "codename": "add_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 43,
+  "fields": {
+    "name": "Can change notification",
+    "content_type": 11,
+    "codename": "change_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 44,
+  "fields": {
+    "name": "Can delete notification",
+    "content_type": 11,
+    "codename": "delete_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 45,
+  "fields": {
+    "name": "Can view notification",
+    "content_type": 11,
+    "codename": "view_notification"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 46,
+  "fields": {
+    "name": "Can add publisher",
+    "content_type": 12,
+    "codename": "add_publisher"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 47,
+  "fields": {
+    "name": "Can change publisher",
+    "content_type": 12,
+    "codename": "change_publisher"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 48,
+  "fields": {
+    "name": "Can delete publisher",
+    "content_type": 12,
+    "codename": "delete_publisher"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 49,
+  "fields": {
+    "name": "Can view publisher",
+    "content_type": 12,
+    "codename": "view_publisher"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 50,
+  "fields": {
+    "name": "Can add newsletter",
+    "content_type": 13,
+    "codename": "add_newsletter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 51,
+  "fields": {
+    "name": "Can change newsletter",
+    "content_type": 13,
+    "codename": "change_newsletter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 52,
+  "fields": {
+    "name": "Can delete newsletter",
+    "content_type": 13,
+    "codename": "delete_newsletter"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 53,
+  "fields": {
+    "name": "Can view newsletter",
+    "content_type": 13,
+    "codename": "view_newsletter"
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 1,
+  "fields": {
+    "name": "Readers",
+    "permissions": [
+      40,
+      53
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 2,
+  "fields": {
+    "name": "Editors",
+    "permissions": [
+      38,
+      39,
+      40,
+      51,
+      52,
+      53
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 3,
+  "fields": {
+    "name": "Journalists",
+    "permissions": [
+      37,
+      38,
+      39,
+      40,
+      50,
+      51,
+      52,
+      53
+    ]
+  }
+},
+{
+  "model": "auth.group",
+  "pk": 4,
+  "fields": {
+    "name": "Publishers",
+    "permissions": [
+      38,
+      39,
+      40,
+      51,
+      52,
+      53
+    ]
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "token"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "authtoken",
+    "model": "tokenproxy"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "news_app",
+    "model": "contactmessage"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "news_app",
+    "model": "customuser"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "news_app",
+    "model": "article"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 11,
+  "fields": {
+    "app_label": "news_app",
+    "model": "notification"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 12,
+  "fields": {
+    "app_label": "news_app",
+    "model": "publisher"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 13,
+  "fields": {
+    "app_label": "news_app",
+    "model": "newsletter"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m9z4g9i5agvsp8dpkwufk0gx3n855jm3",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBCyzC4dO8ZyAxDpWpoUtqV8e7apAvd_vfef6lI21ri1vISJ1FnZdTpd2NKj1x3IHeqt1mnua7LxHpX9EGbvs6Sn5fD_Tso1Mq3ttgNAJJczh6G0VHogcX2A6J4YQcdMnLuxuCNYTRIQCObIGCTF2vU-wPW3zey:1vFyTH:a-2P20TyVWX7aTCKWD0a8eiLJ9bsLs5FYt8FwTEMUFs",
+    "expire_date": "2025-11-17T17:35:59.630Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "s9900w0bq8wo2cjolmhhd2prazin3em4",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pBCyzC4dO8ZyAxDpWpoUtqV8e7apAvd_vfef6lI21ri1vISJ1FnZdTpd2NKj1x3IHeqt1mnua7LxHpX9EGbvs6Sn5fD_Tso1Mq3ttgNAJJczh6G0VHogcX2A6J4YQcdMnLuxuCNYTRIQCObIGCTF2vU-wPW3zey:1vFy0p:dsJ506YpeEjAxfmf0iy8oh-8BOH6veW8B7CdOz9IMfw",
+    "expire_date": "2025-11-17T17:06:35.012Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "a97814181f4967d3520297db43d77548eb54a329",
+  "fields": {
+    "user": 1,
+    "created": "2025-11-03T11:34:59.052Z"
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 1,
+  "fields": {
+    "name": "Tech News Daily",
+    "description": "Leading technology news and analysis",
+    "website": "https://technews.example.com",
+    "founded_date": null,
+    "logo": "",
+    "created_at": "2025-11-03T11:34:05.561Z",
+    "updated_at": "2025-11-03T11:34:05.561Z",
+    "staff_members": [
+      2,
+      10,
+      11,
+      12,
+      13,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 2,
+  "fields": {
+    "name": "The Himalayan Times",
+    "description": "Nepal's leading English daily newspaper covering national and international news",
+    "website": "https://thehimalayantimes.com",
+    "founded_date": "2021-04-21",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:38.760Z",
+    "updated_at": "2025-11-03T12:02:38.760Z",
+    "staff_members": [
+      2,
+      3,
+      13,
+      14,
+      15,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 3,
+  "fields": {
+    "name": "Global Sports Network",
+    "description": "International sports news and live coverage",
+    "website": "https://globalsports.com",
+    "founded_date": "2022-03-17",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:39.148Z",
+    "updated_at": "2025-11-03T12:02:39.148Z",
+    "staff_members": [
+      2,
+      10,
+      11,
+      12,
+      13,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 4,
+  "fields": {
+    "name": "Business Today",
+    "description": "Business news, market analysis and financial updates",
+    "website": "https://businesstoday.com",
+    "founded_date": "2017-11-04",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:39.558Z",
+    "updated_at": "2025-11-03T12:02:39.558Z",
+    "staff_members": [
+      10,
+      11,
+      12,
+      13,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 5,
+  "fields": {
+    "name": "Health & Wellness Tribune",
+    "description": "Latest health news, medical breakthroughs and wellness tips",
+    "website": "https://healthtribune.com",
+    "founded_date": "2021-08-08",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:39.983Z",
+    "updated_at": "2025-11-03T12:02:39.983Z",
+    "staff_members": [
+      3,
+      13,
+      14,
+      15,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 6,
+  "fields": {
+    "name": "Environmental Watch",
+    "description": "Environmental news, climate change and sustainability",
+    "website": "https://envwatch.com",
+    "founded_date": "2021-01-28",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:40.404Z",
+    "updated_at": "2025-11-03T12:02:40.404Z",
+    "staff_members": [
+      2,
+      10,
+      11,
+      12,
+      13,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 7,
+  "fields": {
+    "name": "Cultural Heritage News",
+    "description": "Arts, culture and heritage preservation news",
+    "website": "https://culturalnews.com",
+    "founded_date": "2019-04-22",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:40.767Z",
+    "updated_at": "2025-11-03T12:02:40.767Z",
+    "staff_members": [
+      2,
+      3,
+      13,
+      14,
+      15,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 8,
+  "fields": {
+    "name": "Science & Innovation Hub",
+    "description": "Scientific discoveries and technological innovations",
+    "website": "https://sciencehub.com",
+    "founded_date": "2024-10-21",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:41.185Z",
+    "updated_at": "2025-11-03T12:02:41.185Z",
+    "staff_members": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 9,
+  "fields": {
+    "name": "Education Chronicle",
+    "description": "Educational news, policy updates and academic achievements",
+    "website": "https://educhronicle.com",
+    "founded_date": "2016-04-18",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:41.406Z",
+    "updated_at": "2025-11-03T12:02:41.407Z",
+    "staff_members": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 10,
+  "fields": {
+    "name": "Travel & Tourism Times",
+    "description": "Travel news, destination guides and tourism industry updates",
+    "website": "https://traveltimes.com",
+    "founded_date": "2016-08-31",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:41.590Z",
+    "updated_at": "2025-11-03T12:02:41.591Z",
+    "staff_members": [
+      3,
+      5,
+      6,
+      7,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 11,
+  "fields": {
+    "name": "Food & Lifestyle Magazine",
+    "description": "Culinary news, recipes and lifestyle trends",
+    "website": "https://foodlifestyle.com",
+    "founded_date": "2017-06-30",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:42.137Z",
+    "updated_at": "2025-11-03T12:02:42.137Z",
+    "staff_members": [
+      2,
+      7,
+      8,
+      9,
+      10,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 12,
+  "fields": {
+    "name": "Political Observer",
+    "description": "Political news, analysis and government updates",
+    "website": "https://politicalobserver.com",
+    "founded_date": "2016-08-13",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:42.319Z",
+    "updated_at": "2025-11-03T12:02:42.319Z",
+    "staff_members": [
+      10,
+      11,
+      12,
+      13,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 13,
+  "fields": {
+    "name": "Entertainment Buzz",
+    "description": "Entertainment industry news, celebrity updates and reviews",
+    "website": "https://entertainmentbuzz.com",
+    "founded_date": "2022-08-15",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:42.682Z",
+    "updated_at": "2025-11-03T12:02:42.682Z",
+    "staff_members": [
+      7,
+      8,
+      9,
+      10,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 14,
+  "fields": {
+    "name": "Financial Express",
+    "description": "Stock market news, investment tips and economic analysis",
+    "website": "https://financialexpress.com",
+    "founded_date": "2024-03-05",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:42.949Z",
+    "updated_at": "2025-11-03T12:02:42.949Z",
+    "staff_members": [
+      3,
+      5,
+      6,
+      7,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 15,
+  "fields": {
+    "name": "Local Community News",
+    "description": "Community events, local government and neighborhood updates",
+    "website": "https://localcommunitynews.com",
+    "founded_date": "2016-12-20",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:43.244Z",
+    "updated_at": "2025-11-03T12:02:43.244Z",
+    "staff_members": [
+      2,
+      7,
+      8,
+      9,
+      10,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 16,
+  "fields": {
+    "name": "International Herald",
+    "description": "World news, international affairs and diplomatic updates",
+    "website": "https://internationalherald.com",
+    "founded_date": "2019-04-17",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:44.100Z",
+    "updated_at": "2025-11-03T12:02:44.100Z",
+    "staff_members": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 17,
+  "fields": {
+    "name": "Automotive News Network",
+    "description": "Car reviews, automotive industry news and vehicle launches",
+    "website": "https://autonews.com",
+    "founded_date": "2018-09-20",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:44.574Z",
+    "updated_at": "2025-11-03T12:02:44.574Z",
+    "staff_members": [
+      2,
+      7,
+      8,
+      9,
+      10,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 18,
+  "fields": {
+    "name": "Real Estate Today",
+    "description": "Property news, market trends and real estate investment",
+    "website": "https://realestatetoday.com",
+    "founded_date": "2023-02-26",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:44.882Z",
+    "updated_at": "2025-11-03T12:02:44.882Z",
+    "staff_members": [
+      2,
+      3,
+      13,
+      14,
+      15,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 19,
+  "fields": {
+    "name": "Fashion Forward",
+    "description": "Fashion trends, designer news and style guides",
+    "website": "https://fashionforward.com",
+    "founded_date": "2021-07-08",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:45.134Z",
+    "updated_at": "2025-11-03T12:02:45.134Z",
+    "staff_members": [
+      2,
+      3,
+      13,
+      14,
+      15,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 20,
+  "fields": {
+    "name": "Agriculture & Farming News",
+    "description": "Agricultural news, farming techniques and rural development",
+    "website": "https://agrinews.com",
+    "founded_date": "2022-11-15",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:45.570Z",
+    "updated_at": "2025-11-03T12:02:45.570Z",
+    "staff_members": [
+      2,
+      3,
+      5,
+      6,
+      7,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 21,
+  "fields": {
+    "name": "Youth Voice",
+    "description": "News and stories from the youth perspective",
+    "website": "https://youthvoice.com",
+    "founded_date": "2016-05-18",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:45.803Z",
+    "updated_at": "2025-11-03T12:02:45.803Z",
+    "staff_members": [
+      2,
+      10,
+      11,
+      12,
+      13,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 22,
+  "fields": {
+    "name": "Senior Citizens Today",
+    "description": "News and resources for senior citizens",
+    "website": "https://seniorstoday.com",
+    "founded_date": "2023-09-25",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:46.002Z",
+    "updated_at": "2025-11-03T12:02:46.002Z",
+    "staff_members": [
+      7,
+      8,
+      9,
+      10,
+      28,
+      29
+    ]
+  }
+},
+{
+  "model": "news_app.publisher",
+  "pk": 23,
+  "fields": {
+    "name": "Women's Empowerment News",
+    "description": "Women's rights, achievements and empowerment stories",
+    "website": "https://womenempowerment.com",
+    "founded_date": "2018-02-05",
+    "logo": "",
+    "created_at": "2025-11-03T12:02:46.259Z",
+    "updated_at": "2025-11-03T12:02:46.259Z",
+    "staff_members": [
+      2,
+      7,
+      8,
+      9,
+      10,
+      28
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$RldAsuTpjHz2L1I35CdUNp$UzUp3+lci9audWk6n/SyNq2XXykTlH9xQyWm9So4ZZY=",
+    "last_login": "2025-11-03T17:35:57.898Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-03T11:33:53.404Z",
+    "role": "reader",
+    "bio": null,
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      20
+    ],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Dovi5mYWJt9k5owyuqTZv5$Y8GvABzLXCikgBhpWq87AQsKUIDyt1Tu14po+mlb+04=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "editor1",
+    "first_name": "John",
+    "last_name": "Editor",
+    "email": "editor@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-03T11:34:05.629Z",
+    "role": "editor",
+    "bio": null,
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      2
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yc9D9aqByTo3zwcvMSQIVI$g5kGbWgOlmEpmxEgrtV1LgFsCH0wvH1v/IJkEevZi+A=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist1",
+    "first_name": "Jane",
+    "last_name": "Journalist",
+    "email": "journalist@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T11:34:07.782Z",
+    "role": "journalist",
+    "bio": null,
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$fjtUU5SJt6fOtkuFG1j9cr$nk1j1ZRp8Brx0c7q+ZZ/Nf2DtLV6P5/AGR1aUmsLNos=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader1",
+    "first_name": "Bob",
+    "last_name": "Reader",
+    "email": "reader@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T11:34:09.338Z",
+    "role": "reader",
+    "bio": null,
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      20,
+      1
+    ],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kskUoUoCW2A72Jch0xjS3d$A2Usv7gEMaTddBip3CIxbOw1mi/j4JRzSojTJJvbyoc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_1",
+    "first_name": "John",
+    "last_name": "Smith",
+    "email": "john.smith@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:02:46.453Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in environment",
+    "profile_picture": "",
+    "publisher": 5,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$C3s47LYj0Mtz47nv9a0Pe6$vmzmyFOimfND5C3P/lxkIDceJRMnn89M6lDHYWn2UBQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_2",
+    "first_name": "Sarah",
+    "last_name": "Johnson",
+    "email": "sarah.johnson@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:02:49.817Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in education",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$HVmNWJIjmUEz2OhRhiUYhC$aoQZQUtnLo31wc9AVwz4ooWdyHAbGlt6KT7xS+xMtUQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_3",
+    "first_name": "Michael",
+    "last_name": "Brown",
+    "email": "michael.brown@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:02:53.143Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in business",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$NDBOkUbvt8jlLDMK6UavkD$6o2YSskpdFSeaX2Ou5MVJ26AL9EDh1ZW7sNEBkjDDXE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_4",
+    "first_name": "Emily",
+    "last_name": "Davis",
+    "email": "emily.davis@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:02:56.121Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in sports",
+    "profile_picture": "",
+    "publisher": 1,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$TgblLH20rcElTIGK0UIV02$xla8sbWTbrMQKtDcN7GgBqthaE2nWpitDiwgLwLDZIE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_5",
+    "first_name": "David",
+    "last_name": "Wilson",
+    "email": "david.wilson@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:02:58.953Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in breaking news",
+    "profile_picture": "",
+    "publisher": 5,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 10,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$cvVV1Yx5774hUyvRE3o3jh$It2HY8GZVBagq419UC53KnNKCQ0UzCkHbOVnXThEQ8I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_6",
+    "first_name": "Lisa",
+    "last_name": "Anderson",
+    "email": "lisa.anderson@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:01.611Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in science",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 11,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$6lCybTMcvkySTRjQFmUURY$hHbXAu/m4QBoCxo1/+80viI5ST/Z3LgvBaDx3KGJr1s=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_7",
+    "first_name": "James",
+    "last_name": "Miller",
+    "email": "james.miller@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:04.346Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in education",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$EpyfIZ19RLUWiphENQP7QM$RUcTxEo5ray5q+h/hEtgtGtYDWPZjhf5cSZnjftDYsU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_8",
+    "first_name": "Jennifer",
+    "last_name": "Garcia",
+    "email": "jennifer.garcia@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:07.251Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in local news",
+    "profile_picture": "",
+    "publisher": 6,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$bp6LCsrmNg6r7C44c4onUr$mVgs4dd28wN1Lq8uUaR6n2XrjwKRbeEPHzmLB4qw4iU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_9",
+    "first_name": "Robert",
+    "last_name": "Martinez",
+    "email": "robert.martinez@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:10.500Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in science",
+    "profile_picture": "",
+    "publisher": 20,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$vtlPhjYNPrBVb6svzyaPHn$xcUpc9whtJOX8NJg8VlHGJKyo/NWSqYbM+E3hXEwEBQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_10",
+    "first_name": "Maria",
+    "last_name": "Rodriguez",
+    "email": "maria.rodriguez@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:13.691Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in technology",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nWr0WHekBHBMItvI9MnVr4$WPfuP2/slr3WYwsg9GrcEJJvIXqUy4FDgOGUKK5kBks=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "journalist_11",
+    "first_name": "Christopher",
+    "last_name": "Lee",
+    "email": "christopher.lee@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:16.318Z",
+    "role": "journalist",
+    "bio": "Experienced journalist specializing in opinion",
+    "profile_picture": "",
+    "publisher": 2,
+    "groups": [
+      3
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$kVTMT6zuRy5Hhfw2jPV6yX$LmimaK9jRHdbVvDHj0WBUjAvMex5okKgJMvY2VjtYnc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_1",
+    "first_name": "Reader1",
+    "last_name": "User",
+    "email": "reader1@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:18.978Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in health",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      9,
+      1,
+      23
+    ],
+    "subscribed_journalists": [
+      12
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$3vixyPj7REizOKFn4DJMO7$S0QcShJFMQvjk2Nz2juZidIiQolIkD2F7Kv9QGsYrwM=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_2",
+    "first_name": "Reader2",
+    "last_name": "User",
+    "email": "reader2@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:22.213Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in sports",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      4,
+      13,
+      19,
+      11,
+      23
+    ],
+    "subscribed_journalists": [
+      6,
+      9,
+      13
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$30yfV8gxHlScQMHo2pk0IF$MelFTKBh57cPI5hEsqSGTk6h3hVLx6dNTfUD526iqKk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_3",
+    "first_name": "Reader3",
+    "last_name": "User",
+    "email": "reader3@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:26.048Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in opinion",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      4,
+      9,
+      16,
+      12,
+      21
+    ],
+    "subscribed_journalists": [
+      6
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$wyXctw3C0W7oSoQ6s8LlvC$/uMOjOOROoft7X+bQLqpyYr0T2LSNVG647eF2cLNDIc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_4",
+    "first_name": "Reader4",
+    "last_name": "User",
+    "email": "reader4@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:31.531Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in culture",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      4,
+      6,
+      5
+    ],
+    "subscribed_journalists": [
+      6,
+      8,
+      11
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$vV4mdsJMqan6Cpd1NjGOUT$Qt658DmdpdtvgUSLdWlKJQiUK75WqCMWMtKKaCc3LAU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_5",
+    "first_name": "Reader5",
+    "last_name": "User",
+    "email": "reader5@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:36.083Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in travel",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      14,
+      22
+    ],
+    "subscribed_journalists": [
+      12
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ys6YQZwkGd2dQkfNcDTjsl$MrpyJr7HtIkTE3ulIXN1+NhMsc36dRGapkU/FBfo8X8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_6",
+    "first_name": "Reader6",
+    "last_name": "User",
+    "email": "reader6@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:40.243Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in education",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      20,
+      7,
+      15,
+      1,
+      23
+    ],
+    "subscribed_journalists": [
+      8,
+      10
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 22,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$yp8N8jRUICrbcvTnT04CIs$94SmB3IASrmiMGCVBU0d4Mzc/6l9XjeY5qLN5kwvNCk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_7",
+    "first_name": "Reader7",
+    "last_name": "User",
+    "email": "reader7@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:43.744Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in travel",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      19,
+      14,
+      1
+    ],
+    "subscribed_journalists": [
+      6,
+      8,
+      9
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 23,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$dprOBslemi1Od8R4FgeK6m$58dLwZWTe90OFqjf2bVi82P4YoceEKxwUdCbtPiHFEs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_8",
+    "first_name": "Reader8",
+    "last_name": "User",
+    "email": "reader8@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:52.347Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in travel",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      19,
+      15,
+      2
+    ],
+    "subscribed_journalists": [
+      5,
+      12
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 24,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ERiw8bPxdD3Zz4xNQIf98L$0NeuiZzvOb0zWCU1jNiHgBg7Yk5fX87JKduQcDJq+PY=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_9",
+    "first_name": "Reader9",
+    "last_name": "User",
+    "email": "reader9@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:56.058Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in politics",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      11,
+      16,
+      8,
+      23
+    ],
+    "subscribed_journalists": [
+      10
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 25,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$4ZwGyHpR3MjsyrL3xlzCJU$1c/BzRf7GflqgrdqUbdL4pz7tOcH+ErKalt/0Cc35Ks=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_10",
+    "first_name": "Reader10",
+    "last_name": "User",
+    "email": "reader10@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:03:59.905Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in travel",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      5
+    ],
+    "subscribed_journalists": [
+      10,
+      13
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 26,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$fI1rXe1uRdX65gVbXTfl8c$H4YU0DCDRBTrNBwcaCgIVX+yTvvMXeZnnScaQfKfAgs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_11",
+    "first_name": "Reader11",
+    "last_name": "User",
+    "email": "reader11@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:03.997Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in analysis",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      17,
+      3,
+      1,
+      21
+    ],
+    "subscribed_journalists": [
+      12,
+      13,
+      15
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 27,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$ou7c2jRqosDEGqk9OKKJ5U$8adhcQLaSGTrYhfUxQoVzWsO0vpMp5xD7wLgm0bwRj8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "reader_12",
+    "first_name": "Reader12",
+    "last_name": "User",
+    "email": "reader12@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:07.547Z",
+    "role": "reader",
+    "bio": "Avid news reader interested in culture",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      22
+    ],
+    "subscribed_journalists": [
+      5,
+      10
+    ]
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 28,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$nV4fshLlWxv4CIOVXR76UO$zCn1ZwZMocK/LVhxtYl7xFZhJh6sH01F1hYI05fud0w=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "editor_1",
+    "first_name": "Editor1",
+    "last_name": "Chief",
+    "email": "editor1@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:10.670Z",
+    "role": "editor",
+    "bio": "Senior editor with expertise in editorial management",
+    "profile_picture": "",
+    "publisher": 2,
+    "groups": [
+      2
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 29,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$jM3K66gpuIvQZGI8OVET85$rHglZNPkRQtajCyZIEXavf/aMEZqqJ3/3ATfgETzrmc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "editor_2",
+    "first_name": "Editor2",
+    "last_name": "Chief",
+    "email": "editor2@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:13.368Z",
+    "role": "editor",
+    "bio": "Senior editor with expertise in editorial management",
+    "profile_picture": "",
+    "publisher": 1,
+    "groups": [
+      2
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 30,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$9SORdsrZYN4ghJnQrDvo3K$5QDXGxJRKxZfkrVYFnSIozL7tG7qhtlcDjCCwfWIXYU=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "superuser_2",
+    "first_name": "Admin2",
+    "last_name": "User",
+    "email": "admin2@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:16.238Z",
+    "role": "editor",
+    "bio": "System administrator",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      2
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 31,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$Lqf2Un9Cx67ohVI1GZ7GER$4Qh5yqAOmsZIG/GoahMSdNeVIuHVKS6bBUNIRvWX1Ec=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "superuser_3",
+    "first_name": "Admin3",
+    "last_name": "User",
+    "email": "admin3@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:19.006Z",
+    "role": "editor",
+    "bio": "System administrator",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      2
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 32,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$hIuju05XAG1JynmIxSG6Iy$LWVTQ2lNfAgyBPpudkrFXPhKzQnXox4CAtyN3yeT0uA=",
+    "last_login": null,
+    "is_superuser": true,
+    "username": "superuser_4",
+    "first_name": "Admin4",
+    "last_name": "User",
+    "email": "admin4@example.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2025-11-03T12:04:21.653Z",
+    "role": "editor",
+    "bio": "System administrator",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      2
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 33,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$bk3ZDi6RNlLAhQ2ZeK9Jws$XXJViKXr0Nj0JDRc/F7rGMSBz+HfwuOJoH1clouEWjc=",
+    "last_login": "2025-11-03T13:37:10.681Z",
+    "is_superuser": false,
+    "username": "yadavthapa",
+    "first_name": "yadav",
+    "last_name": "thapa",
+    "email": "hemjaliyadav@yahoo.com.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T13:37:07.256Z",
+    "role": "reader",
+    "bio": "",
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.customuser",
+  "pk": 40,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$dThsN6NAQ6OSjUGxiBMTTm$IeSoxxJ/2hUQoDBYhR7RiquHt2gKU7h5w/Wrwz32I68=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "hemjali_test",
+    "first_name": "Hemjali",
+    "last_name": "Yadav",
+    "email": "hemjaliyadav@yahoo.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-11-03T17:58:24.101Z",
+    "role": "reader",
+    "bio": null,
+    "profile_picture": "",
+    "publisher": null,
+    "groups": [
+      1
+    ],
+    "user_permissions": [],
+    "subscribed_publishers": [
+      20
+    ],
+    "subscribed_journalists": []
+  }
+},
+{
+  "model": "news_app.contactmessage",
+  "pk": 1,
+  "fields": {
+    "name": "John Doe",
+    "email": "john.doe@email.com",
+    "message": "Great website! Love the news coverage.",
+    "created_at": "2025-11-03T12:04:40.958Z"
+  }
+},
+{
+  "model": "news_app.contactmessage",
+  "pk": 2,
+  "fields": {
+    "name": "Jane Smith",
+    "email": "jane.smith@email.com",
+    "message": "Could you cover more local events?",
+    "created_at": "2025-11-03T12:04:41.123Z"
+  }
+},
+{
+  "model": "news_app.contactmessage",
+  "pk": 3,
+  "fields": {
+    "name": "Mike Johnson",
+    "email": "mike.j@email.com",
+    "message": "The sports section is excellent!",
+    "created_at": "2025-11-03T12:04:41.357Z"
+  }
+},
+{
+  "model": "news_app.contactmessage",
+  "pk": 4,
+  "fields": {
+    "name": "Sarah Williams",
+    "email": "sarah.w@email.com",
+    "message": "Thank you for the environmental coverage.",
+    "created_at": "2025-11-03T12:04:41.571Z"
+  }
+},
+{
+  "model": "news_app.contactmessage",
+  "pk": 5,
+  "fields": {
+    "name": "David Brown",
+    "email": "david.brown@email.com",
+    "message": "Request for more business news.",
+    "created_at": "2025-11-03T12:04:41.759Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 1,
+  "fields": {
+    "recipient": 17,
+    "article": 2,
+    "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "84f41bf5c6fe47dbbf11ed2c7c62dfcb",
+    "created_at": "2025-11-03T12:04:42.176Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 2,
+  "fields": {
+    "recipient": 18,
+    "article": 2,
+    "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "946037130b4948cfac4002f210b47715",
+    "created_at": "2025-11-03T12:04:42.527Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 3,
+  "fields": {
+    "recipient": 19,
+    "article": 2,
+    "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "ec1b70e693c84384857d890cb567fe4d",
+    "created_at": "2025-11-03T12:04:42.759Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 4,
+  "fields": {
+    "recipient": 22,
+    "article": 2,
+    "title": "New article: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "message": "A new article has been published: Breaking: Major Climate Summit Reaches Historic Agreement",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "8500e4e61a4f4b9797631815dedd40ce",
+    "created_at": "2025-11-03T12:04:43.009Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 5,
+  "fields": {
+    "recipient": 20,
+    "article": 3,
+    "title": "New article: Tech Giant Announces Revolutionary AI Breakthrough",
+    "message": "A new article has been published: Tech Giant Announces Revolutionary AI Breakthrough",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:43.565Z",
+    "read_token": "e09892031724453cbf1868da0fdbfcc8",
+    "created_at": "2025-11-03T12:04:43.294Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 6,
+  "fields": {
+    "recipient": 22,
+    "article": 3,
+    "title": "New article: Tech Giant Announces Revolutionary AI Breakthrough",
+    "message": "A new article has been published: Tech Giant Announces Revolutionary AI Breakthrough",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "6212fd8414df450992d0f4c9c25c8ece",
+    "created_at": "2025-11-03T12:04:43.834Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 7,
+  "fields": {
+    "recipient": 19,
+    "article": 4,
+    "title": "New article: Local Community Wins Environmental Protection Battle",
+    "message": "A new article has been published: Local Community Wins Environmental Protection Battle",
+    "notification_type": "journalist",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "e6d11af77e68401c813b6ed65e14bab6",
+    "created_at": "2025-11-03T12:04:44.094Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 8,
+  "fields": {
+    "recipient": 27,
+    "article": 4,
+    "title": "New article: Local Community Wins Environmental Protection Battle",
+    "message": "A new article has been published: Local Community Wins Environmental Protection Battle",
+    "notification_type": "publisher",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "32f6268a6df246e98daccb3c1ff52641",
+    "created_at": "2025-11-03T12:04:44.344Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 9,
+  "fields": {
+    "recipient": 20,
+    "article": 4,
+    "title": "New article: Local Community Wins Environmental Protection Battle",
+    "message": "A new article has been published: Local Community Wins Environmental Protection Battle",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:44.857Z",
+    "read_token": "f2e13593ee68425bbc821634ac3373a1",
+    "created_at": "2025-11-03T12:04:44.607Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 10,
+  "fields": {
+    "recipient": 25,
+    "article": 5,
+    "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+    "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:45.278Z",
+    "read_token": "bc1bd5fac4ed444187a04942d6ef5da4",
+    "created_at": "2025-11-03T12:04:45.093Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 11,
+  "fields": {
+    "recipient": 19,
+    "article": 5,
+    "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+    "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "b76f0e548bf34800be946f31445204d8",
+    "created_at": "2025-11-03T12:04:45.470Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 12,
+  "fields": {
+    "recipient": 17,
+    "article": 5,
+    "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+    "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "a0d95379bbe242ef8e14428ca843ad71",
+    "created_at": "2025-11-03T12:04:45.707Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 13,
+  "fields": {
+    "recipient": 22,
+    "article": 5,
+    "title": "New article: New Medical Treatment Shows Promise for Rare Disease",
+    "message": "A new article has been published: New Medical Treatment Shows Promise for Rare Disease",
+    "notification_type": "journalist",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "c33c553f44314f4dbd204428ad32db8f",
+    "created_at": "2025-11-03T12:04:45.994Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 14,
+  "fields": {
+    "recipient": 16,
+    "article": 6,
+    "title": "New article: Economic Growth Reaches Five-Year High",
+    "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "d68c9f13616741a0b4cc351dbe68582a",
+    "created_at": "2025-11-03T12:04:46.224Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 15,
+  "fields": {
+    "recipient": 17,
+    "article": 6,
+    "title": "New article: Economic Growth Reaches Five-Year High",
+    "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:46.793Z",
+    "read_token": "296b14c12aa44a31a95dc7c86a822898",
+    "created_at": "2025-11-03T12:04:46.590Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 16,
+  "fields": {
+    "recipient": 19,
+    "article": 6,
+    "title": "New article: Economic Growth Reaches Five-Year High",
+    "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "3e6c4e8d747d4bf79f66ea0d84317fa8",
+    "created_at": "2025-11-03T12:04:47.023Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 17,
+  "fields": {
+    "recipient": 21,
+    "article": 6,
+    "title": "New article: Economic Growth Reaches Five-Year High",
+    "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "6916342bbe0d4097a88f4528449ffe1a",
+    "created_at": "2025-11-03T12:04:47.311Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 18,
+  "fields": {
+    "recipient": 24,
+    "article": 6,
+    "title": "New article: Economic Growth Reaches Five-Year High",
+    "message": "A new article has been published: Economic Growth Reaches Five-Year High",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:47.840Z",
+    "read_token": "9649a954e9e243819bf886f46bf6232b",
+    "created_at": "2025-11-03T12:04:47.587Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 19,
+  "fields": {
+    "recipient": 26,
+    "article": 7,
+    "title": "New article: Cultural Festival Celebrates Diverse Heritage",
+    "message": "A new article has been published: Cultural Festival Celebrates Diverse Heritage",
+    "notification_type": "journalist",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "db65d9bbd47542c9943e4a7ca7bab84b",
+    "created_at": "2025-11-03T12:04:48.055Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 20,
+  "fields": {
+    "recipient": 23,
+    "article": 7,
+    "title": "New article: Cultural Festival Celebrates Diverse Heritage",
+    "message": "A new article has been published: Cultural Festival Celebrates Diverse Heritage",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:48.635Z",
+    "read_token": "99e16e7b0cf045adb8cbf36b193e5365",
+    "created_at": "2025-11-03T12:04:48.335Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 21,
+  "fields": {
+    "recipient": 4,
+    "article": 8,
+    "title": "New article: Education Reform Bill Passes Legislature",
+    "message": "A new article has been published: Education Reform Bill Passes Legislature",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "5c3889a45d70475c9c24f425a6399de3",
+    "created_at": "2025-11-03T12:04:48.938Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 22,
+  "fields": {
+    "recipient": 16,
+    "article": 8,
+    "title": "New article: Education Reform Bill Passes Legislature",
+    "message": "A new article has been published: Education Reform Bill Passes Legislature",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "d38a7428cc544ba69497a92735ab28db",
+    "created_at": "2025-11-03T12:04:49.238Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 23,
+  "fields": {
+    "recipient": 19,
+    "article": 8,
+    "title": "New article: Education Reform Bill Passes Legislature",
+    "message": "A new article has been published: Education Reform Bill Passes Legislature",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:49.760Z",
+    "read_token": "9718a55e3aad4188adfb7609bdfce89c",
+    "created_at": "2025-11-03T12:04:49.476Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 24,
+  "fields": {
+    "recipient": 21,
+    "article": 8,
+    "title": "New article: Education Reform Bill Passes Legislature",
+    "message": "A new article has been published: Education Reform Bill Passes Legislature",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:50.215Z",
+    "read_token": "92e502c3b1bc49ce83f0f401f3de5e9b",
+    "created_at": "2025-11-03T12:04:49.990Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 25,
+  "fields": {
+    "recipient": 22,
+    "article": 8,
+    "title": "New article: Education Reform Bill Passes Legislature",
+    "message": "A new article has been published: Education Reform Bill Passes Legislature",
+    "notification_type": "publisher",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "8f855315979348238e0e2b326de302af",
+    "created_at": "2025-11-03T12:04:50.477Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 26,
+  "fields": {
+    "recipient": 17,
+    "article": 9,
+    "title": "New article: Sports Championship Finals Draw Record Audience",
+    "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+    "notification_type": "journalist",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "24578c4780ab4310a3dfe14c35d8d987",
+    "created_at": "2025-11-03T12:04:50.974Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 27,
+  "fields": {
+    "recipient": 18,
+    "article": 9,
+    "title": "New article: Sports Championship Finals Draw Record Audience",
+    "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "68e6467a64c143e3a2071a5660dadaf7",
+    "created_at": "2025-11-03T12:04:51.236Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 28,
+  "fields": {
+    "recipient": 19,
+    "article": 9,
+    "title": "New article: Sports Championship Finals Draw Record Audience",
+    "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "cfe425f30eae47df8c3984e192384965",
+    "created_at": "2025-11-03T12:04:51.622Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 29,
+  "fields": {
+    "recipient": 22,
+    "article": 9,
+    "title": "New article: Sports Championship Finals Draw Record Audience",
+    "message": "A new article has been published: Sports Championship Finals Draw Record Audience",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:52.040Z",
+    "read_token": "13712da8beec42179ddeb3ca5b48ae41",
+    "created_at": "2025-11-03T12:04:51.839Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 30,
+  "fields": {
+    "recipient": 25,
+    "article": 10,
+    "title": "New article: International Trade Agreement Signed",
+    "message": "A new article has been published: International Trade Agreement Signed",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": "2025-11-03T12:04:52.517Z",
+    "read_token": "56d95703418244ccbeb780b527d4240a",
+    "created_at": "2025-11-03T12:04:52.278Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 31,
+  "fields": {
+    "recipient": 19,
+    "article": 10,
+    "title": "New article: International Trade Agreement Signed",
+    "message": "A new article has been published: International Trade Agreement Signed",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "5fbfe2c5f981480390fb2967408d0ac1",
+    "created_at": "2025-11-03T12:04:52.770Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 32,
+  "fields": {
+    "recipient": 17,
+    "article": 10,
+    "title": "New article: International Trade Agreement Signed",
+    "message": "A new article has been published: International Trade Agreement Signed",
+    "notification_type": "journalist",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "11cda7280b04487fbb6c678bb2b590d6",
+    "created_at": "2025-11-03T12:04:53.014Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 33,
+  "fields": {
+    "recipient": 22,
+    "article": 10,
+    "title": "New article: International Trade Agreement Signed",
+    "message": "A new article has been published: International Trade Agreement Signed",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "f5bd12f1d98940f4a8619c3fe2234032",
+    "created_at": "2025-11-03T12:04:53.360Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 34,
+  "fields": {
+    "recipient": 4,
+    "article": 11,
+    "title": "New article: Renewable Energy Project Powers Entire City",
+    "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "4a2cbb12995843d989162e245f2f427d",
+    "created_at": "2025-11-03T12:04:53.586Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 35,
+  "fields": {
+    "recipient": 16,
+    "article": 11,
+    "title": "New article: Renewable Energy Project Powers Entire City",
+    "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "14b36bc9e9c845248508a8bc5344c755",
+    "created_at": "2025-11-03T12:04:53.816Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 36,
+  "fields": {
+    "recipient": 19,
+    "article": 11,
+    "title": "New article: Renewable Energy Project Powers Entire City",
+    "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+    "notification_type": "journalist",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "bcdf8358eda24a579af1a2a0b834cc53",
+    "created_at": "2025-11-03T12:04:54.051Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 37,
+  "fields": {
+    "recipient": 21,
+    "article": 11,
+    "title": "New article: Renewable Energy Project Powers Entire City",
+    "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+    "notification_type": "publisher",
+    "is_read": true,
+    "email_opened_at": null,
+    "read_token": "bed8d56c5dde41f0b175038085bc75e8",
+    "created_at": "2025-11-03T12:04:54.282Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 38,
+  "fields": {
+    "recipient": 22,
+    "article": 11,
+    "title": "New article: Renewable Energy Project Powers Entire City",
+    "message": "A new article has been published: Renewable Energy Project Powers Entire City",
+    "notification_type": "publisher",
+    "is_read": false,
+    "email_opened_at": null,
+    "read_token": "5944a3e8f46a46b6ba41b600d32d02af",
+    "created_at": "2025-11-03T12:04:54.553Z"
+  }
+},
+{
+  "model": "news_app.notification",
+  "pk": 39,
+  "fields": {
+    "recipient": 21,
+    "article": 150,
+    "title": "New Article from Agriculture & Farming News: Test Signal Article - Email Test",
+    "message": 

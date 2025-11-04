@@ -1,0 +1,194 @@
+{% extends 'news_app/base.html' %}
+
+{% block title %}Profile - {{ block.super }}{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-8">
+            <!-- User Profile Card -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header">
+                    <h3 class="mb-0">
+                        <i class="bi bi-person-circle me-2"></i>Your Profile
+                    </h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            {% if user.profile_picture %}
+                                <img src="{{ user.profile_picture.url }}" 
+                                     alt="{{ user.get_full_name }}" 
+                                     class="rounded-circle img-fluid mb-3" 
+                                     style="max-width: 100px;">
+                            {% else %}
+                                <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mb-3" 
+                                     style="width: 100px; height: 100px;">
+                                    <i class="bi bi-person-fill text-white fs-1"></i>
+                                </div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-9">
+                            <h4>{{ user.get_full_name|default:user.username }}</h4>
+                            <p class="text-muted">
+                                <strong>Role:</strong> 
+                                <span class="badge bg-primary">{{ user.get_role_display }}</span>
+                            </p>
+                            <p class="text-muted">
+                                <strong>Email:</strong> {{ user.email }}
+                            </p>
+                            {% if user.bio %}
+                                <p class="text-muted">
+                                    <strong>Bio:</strong> {{ user.bio }}
+                                </p>
+                            {% endif %}
+                            {% if user.role == 'journalist' and managed_publisher %}
+                                <p class="text-muted">
+                                    <strong>Publisher:</strong> 
+                                    <a href="{% url 'publisher_detail' managed_publisher.pk %}">
+                                        {{ managed_publisher.name }}
+                                    </a>
+                                </p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- For Readers: Subscriptions -->
+            {% if user.role == 'reader' %}
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-building me-2"></i>Publisher Subscriptions
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                {% for publisher in subscribed_publishers %}
+                                    <div class="d-flex justify-content-between align-items-center mb-2 p-2 border rounded">
+                                        <div>
+                                            <a href="{% url 'publisher_detail' publisher.pk %}" class="text-decoration-none">
+                                                <strong>{{ publisher.name }}</strong>
+                                            </a>
+                                        </div>
+                                        <form method="post" action="{% url 'toggle_publisher_subscription' publisher.pk %}" class="d-inline">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-x"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                {% empty %}
+                                    <p class="text-muted">You're not subscribed to any publishers yet.</p>
+                                    <a href="{% url 'publisher_list' %}" class="btn btn-primary btn-sm">
+                                        Browse Publishers
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm mb-4">
+                            <div class="card-header">
+                                <h5 class="mb-0">
+                                    <i class="bi bi-pencil-square me-2"></i>Journalist Subscriptions
+                                </h5>
+                            </div>
+                            <div class="card-body">
+                                {% for journalist in subscribed_journalists %}
+                                    <div class="d-flex justify-content-between align-items-center mb-2 p-2 border rounded">
+                                        <div>
+                                            <a href="{% url 'journalist_detail' journalist.pk %}" class="text-decoration-none">
+                                                <strong>{{ journalist.get_full_name|default:journalist.username }}</strong>
+                                            </a>
+                                        </div>
+                                        <form method="post" action="{% url 'toggle_journalist_subscription' journalist.pk %}" class="d-inline">
+                                            {% csrf_token %}
+                                            <button type="submit" class="btn btn-outline-danger btn-sm">
+                                                <i class="bi bi-x"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                {% empty %}
+                                    <p class="text-muted">You're not following any journalists yet.</p>
+                                    <a href="{% url 'journalist_list' %}" class="btn btn-primary btn-sm">
+                                        Browse Journalists
+                                    </a>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            <!-- For Journalists: Managed Content -->
+            {% if user.role == 'journalist' %}
+                <div class="card shadow-sm mb-4">
+                    <div class="card-header">
+                        <h5 class="mb-0">
+                            <i class="bi bi-newspaper me-2"></i>Your Articles
+                        </h5>
+                    </div>
+                    <div class="card-body">
+                        {% for article in managed_articles %}
+                            <div class="d-flex justify-content-between align-items-center mb-3 p-3 border rounded">
+                                <div>
+                                    <h6 class="mb-1">
+                                        <a href="{% url 'article_detail' article.slug %}" class="text-decoration-none">
+                                            {{ article.title }}
+                                        </a>
+                                    </h6>
+                                    <small class="text-muted">
+                                        {{ article.created_at|date:"M j, Y" }} • 
+                                        <span class="badge bg-{% if article.is_approved %}success{% else %}warning{% endif %}">
+                                            {{ article.status|capfirst }}
+                                        </span>
+                                    </small>
+                                </div>
+                            </div>
+                        {% empty %}
+                            <p class="text-muted">You haven't published any articles yet.</p>
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="bi bi-gear me-2"></i>Account Actions
+                    </h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <a href="{% url 'edit_profile' %}" class="btn btn-primary">
+                            <i class="bi bi-pencil-square me-1"></i>Edit Profile
+                        </a>
+                        <a href="{% url 'article_list' %}" class="btn btn-outline-primary">
+                            <i class="bi bi-house me-1"></i>Back to Homepage
+                        </a>
+                        {% if user.role == 'reader' %}
+                            <a href="{% url 'publisher_list' %}" class="btn btn-outline-secondary">
+                                <i class="bi bi-building me-1"></i>Browse Publishers
+                            </a>
+                            <a href="{% url 'journalist_list' %}" class="btn btn-outline-secondary">
+                                <i class="bi bi-pencil-square me-1"></i>Browse Journalists
+                            </a>
+                        {% endif %}
+                        {% if user.is_staff %}
+                            <a href="/admin/" class="btn btn-outline-warning">
+                                <i class="bi bi-gear-fill me-1"></i>Admin Panel
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

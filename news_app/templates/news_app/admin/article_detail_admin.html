@@ -1,0 +1,343 @@
+{% extends 'news_app/base.html' %}
+{% load static %}
+
+{% block title %}{{ article.title }} - Admin Review{% endblock %}
+
+{% block extra_css %}
+<style>
+    .admin-article-detail {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    .article-header-admin {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+    .article-title-admin {
+        font-size: 2.2rem;
+        color: #2c3e50;
+        margin-bottom: 20px;
+        line-height: 1.3;
+    }
+    .article-meta-admin {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        margin-bottom: 25px;
+        padding: 20px;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+    .meta-item {
+        text-align: center;
+    }
+    .meta-label {
+        display: block;
+        font-size: 0.9rem;
+        color: #6c757d;
+        margin-bottom: 5px;
+        font-weight: 500;
+    }
+    .meta-value {
+        font-size: 1.1rem;
+        color: #2c3e50;
+        font-weight: 600;
+    }
+    .approval-status {
+        text-align: center;
+        padding: 15px;
+        border-radius: 8px;
+        margin-bottom: 25px;
+        font-weight: 600;
+        font-size: 1.1rem;
+    }
+    .status-pending {
+        background: #fff3cd;
+        color: #856404;
+        border: 2px solid #ffeaa7;
+    }
+    .status-approved {
+        background: #d4edda;
+        color: #155724;
+        border: 2px solid #c3e6cb;
+    }
+    .status-rejected {
+        background: #f8d7da;
+        color: #721c24;
+        border: 2px solid #f1aeb5;
+    }
+    .article-content-admin {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+    .content-header {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 15px;
+        margin-bottom: 25px;
+    }
+    .content-header h3 {
+        color: #2c3e50;
+        margin: 0;
+        font-size: 1.4rem;
+    }
+    .article-text {
+        line-height: 1.8;
+        font-size: 1.1rem;
+        color: #2c3e50;
+    }
+    .article-text p {
+        margin-bottom: 20px;
+    }
+    .admin-actions-panel {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 30px;
+        margin-bottom: 25px;
+    }
+    .actions-header {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+    .actions-header h3 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    .actions-header p {
+        color: #6c757d;
+    }
+    .action-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    .btn-admin-action {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        min-width: 160px;
+        justify-content: center;
+    }
+    .btn-approve-admin {
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+    }
+    .btn-approve-admin:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    .btn-reject-admin {
+        background: linear-gradient(45deg, #dc3545, #c82333);
+        color: white;
+    }
+    .btn-reject-admin:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    .btn-back-admin {
+        background: linear-gradient(45deg, #6c757d, #5a6268);
+        color: white;
+    }
+    .btn-back-admin:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(108, 117, 125, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    .btn-view-public {
+        background: linear-gradient(45deg, #007bff, #0056b3);
+        color: white;
+    }
+    .btn-view-public:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(0, 123, 255, 0.4);
+        color: white;
+        text-decoration: none;
+    }
+    .article-image-admin {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin: 20px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+    .additional-info {
+        background: #f8f9fa;
+        border-left: 4px solid #007bff;
+        padding: 20px;
+        margin: 20px 0;
+        border-radius: 0 8px 8px 0;
+    }
+    .additional-info h4 {
+        color: #2c3e50;
+        margin-bottom: 10px;
+    }
+    .additional-info p {
+        color: #6c757d;
+        margin: 0;
+    }
+    .navigation-breadcrumb {
+        background: white;
+        padding: 15px 25px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    .breadcrumb {
+        margin: 0;
+        background: none;
+        padding: 0;
+    }
+    .breadcrumb-item + .breadcrumb-item::before {
+        content: "›";
+        color: #6c757d;
+        font-weight: bold;
+    }
+    .category-badge {
+        display: inline-block;
+        background: #007bff;
+        color: white;
+        padding: 5px 15px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="admin-article-detail">
+    <!-- Navigation Breadcrumb -->
+    <nav class="navigation-breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url 'admin_dashboard' %}">Admin Dashboard</a></li>
+            <li class="breadcrumb-item"><a href="{% url 'admin_article_approval_list' %}">Article Management</a></li>
+            <li class="breadcrumb-item active">{{ article.title|truncatechars:50 }}</li>
+        </ol>
+    </nav>
+
+    <!-- Article Header -->
+    <div class="article-header-admin">
+        <h1 class="article-title-admin">{{ article.title }}</h1>
+        
+        <div class="article-meta-admin">
+            <div class="meta-item">
+                <span class="meta-label">Author</span>
+                <div class="meta-value">{{ article.author.get_full_name|default:article.author.username }}</div>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Publisher</span>
+                <div class="meta-value">{{ article.publisher.name }}</div>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Created</span>
+                <div class="meta-value">{{ article.created_at|date:"M j, Y g:i A" }}</div>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">Tags</span>
+                <div class="meta-value">{{ article.tags|default:"No tags" }}</div>
+            </div>
+        </div>
+
+        {% if article.tags %}
+        <span class="category-badge">{{ article.tags }}</span>
+        {% endif %}
+    </div>
+
+    <!-- Approval Status -->
+    <div class="approval-status status-{% if article.is_approved %}approved{% else %}pending{% endif %}">
+        {% if article.is_approved %}
+            ✅ This article has been APPROVED and is visible to subscribers
+        {% else %}
+            ⏳ This article is PENDING approval and not yet visible to users
+        {% endif %}
+    </div>
+
+    <!-- Article Content -->
+    <div class="article-content-admin">
+        <div class="content-header">
+            <h3>Article Content</h3>
+        </div>
+        
+        {% if article.image %}
+        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="article-image-admin">
+        {% endif %}
+        
+        <div class="article-text">
+            {% for paragraph in article.content|linebreaks %}
+                {{ paragraph }}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Additional Information -->
+    <div class="additional-info">
+        <h4>Review Guidelines</h4>
+        <p>
+            Ensure the article meets quality standards, follows editorial guidelines, 
+            and is appropriate for the target audience. Check for accuracy, proper sourcing, 
+            and adherence to publication standards before approval.
+        </p>
+    </div>
+
+    <!-- Admin Actions Panel -->
+    <div class="admin-actions-panel">
+        <div class="actions-header">
+            <h3>Administrative Actions</h3>
+            <p>Review the article content above and choose an appropriate action</p>
+        </div>
+        
+        <div class="action-buttons">
+            {% if not article.is_approved %}
+            <a href="{% url 'admin_approve_article' article.id %}" 
+               class="btn-admin-action btn-approve-admin"
+               onclick="return confirm('Are you sure you want to approve this article? This will make it visible to all subscribers and send notification emails.')">
+                ✅ Approve Article
+            </a>
+            
+            <a href="{% url 'admin_reject_article' article.id %}" 
+               class="btn-admin-action btn-reject-admin"
+               onclick="return confirm('Are you sure you want to reject this article? This action can be undone later.')">
+                ❌ Reject Article
+            </a>
+            {% else %}
+            <div class="btn-admin-action" style="background: #e9ecef; color: #6c757d; cursor: default;">
+                ✅ Already Approved
+            </div>
+            {% endif %}
+            
+            <a href="{% url 'article_detail' article.slug %}" 
+               class="btn-admin-action btn-view-public"
+               target="_blank">
+                👁️ View Public
+            </a>
+            
+            <a href="{% url 'admin_article_approval_list' %}" 
+               class="btn-admin-action btn-back-admin">
+                ← Back to List
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}
