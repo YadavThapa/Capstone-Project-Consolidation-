@@ -1136,5 +1136,56 @@ http://127.0.0.1:8000/django-admin/news_app/customuser/35/change/
 ## Access Control for Management Control-- Can see approved by and appproved time etc.
 http://127.0.0.1:8000/django-admin/news_app/article/175/change/
 
+---
+
+## 🐍 Running with Python venv
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/YadavThapa/Capstone-Project-Consolidation-.git
+   cd Capstone-Project-Consolidation-
+   ```
+2. **Create and activate a virtual environment:**
+   ```sh
+   python -m venv venv
+   # On Windows:
+   venv\Scripts\activate
+   # On macOS/Linux:
+   source venv/bin/activate
+   ```
+3. **Install dependencies:**
+   ```sh
+   pip install --upgrade pip
+   pip install -r requirements.txt
+   ```
+4. **Set up environment variables:**
+   - Copy `config/.env.example` to `config/.env` and fill in your secrets (e.g., `SECRET_KEY`, database credentials).
+   - **Do not commit your `.env` file!**
+5. **Apply migrations and run the server:**
+   ```sh
+   python manage.py migrate
+   python manage.py runserver
+   ```
+
+## 🐳 Running with Docker
+
+1. **Build the Docker image:**
+   ```sh
+   docker build -t capstone-news-app .
+   ```
+2. **Run the container:**
+   ```sh
+   docker run -it --rm -p 8000:8000 --env-file config/.env capstone-news-app
+   ```
+   - Ensure you have a valid `config/.env` file with all required secrets.
+
+## ⚠️ Security Notice
+- **Never commit secrets** (passwords, API keys, tokens) to the repository.
+- Use `.env` files for secrets and ensure `.gitignore` excludes them.
+- For reviewers: temporary credentials can be provided in a separate text file if needed for testing.
+
+## 📚 Documentation
+- User and developer documentation is available in the `docs/` folder. Open `docs/_build/html/index.html` in your browser after building docs with Sphinx.
+
 
 
