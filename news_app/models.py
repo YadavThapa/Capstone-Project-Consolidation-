@@ -39,7 +39,10 @@ ROLE_CHOICES = [
 
 
 class Publisher(models.Model):
-    """Publisher model - can have multiple editors and journalists"""
+    """
+    Publisher model - can have multiple editors and journalists.
+    Stores publisher details and manages staff relationships.
+    """
     name = models.CharField(max_length=200)
     description = models.TextField(blank=True)
     website = models.URLField(blank=True, null=True)
@@ -154,7 +157,10 @@ def _is_mostly_english(text: str, threshold: float = 0.8) -> bool:
 
 
 class CustomUser(AbstractUser):
-    """Custom user with role and profile fields"""
+    """
+    Custom user with role and profile fields.
+    Extends Django's AbstractUser to support roles and subscriptions.
+    """
     role = models.CharField(
         max_length=20,
         choices=ROLE_CHOICES,
