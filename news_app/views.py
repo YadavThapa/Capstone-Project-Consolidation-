@@ -14,7 +14,12 @@ logger = logging.getLogger(__name__)
 
 def article_list(request):
 
-    """Display list of published articles on homepage with category filtering.
+    """
+    Display list of published articles on homepage with category filtering.
+    Args:
+        request: Django HttpRequest object.
+    Returns:
+        Rendered homepage with articles and categories.
     """
     try:
         # Get all active categories for navigation
@@ -99,7 +104,14 @@ def article_list(request):
 
 
 def article_detail(request, slug):
-    """Display individual article details."""
+    """
+    Display individual article details.
+    Args:
+        request: Django HttpRequest object.
+        slug: Slug of the article to display.
+    Returns:
+        Rendered article detail page.
+    """
     try:
         article = get_object_or_404(
             Article.objects.select_related('author', 'publisher'),
@@ -129,12 +141,20 @@ def article_detail(request, slug):
 
 
 def about(request):
-    """Display about page."""
+    """
+    Display about page.
+    """
     return render(request, 'news_app/about.html')
 
 
 def contact(request):
-    """Handle contact form submissions."""
+    """
+    Handle contact form submissions.
+    Args:
+        request: Django HttpRequest object.
+    Returns:
+        Rendered contact page or redirects after form submission.
+    """
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
@@ -192,7 +212,13 @@ def contact(request):
 
 
 def signup(request):
-    """Handle user registration."""
+    """
+    Handle user registration.
+    Args:
+        request: Django HttpRequest object.
+    Returns:
+        Rendered signup page or redirects after successful registration.
+    """
     if request.method == 'POST':
         form = CustomUserCreationForm(request.POST)
         if form.is_valid():
